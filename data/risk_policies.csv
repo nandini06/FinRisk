@@ -1,0 +1,11 @@
+policy_id,title,policy_text,risk_category,severity
+AML-001,High Value Cash Payments,"Cash payments equal to or above USD 5,000,000 require enhanced due diligence and manual review.",high_value_cash,HIGH
+AML-002,High Risk Jurisdiction,Transfers to jurisdictions with country risk score 4 or 5 require additional source-of-funds verification.,jurisdiction,HIGH
+AML-003,Behavior Deviation,Transactions exceeding 10x a customer monthly average should be investigated for unusual activity.,behavior,MEDIUM
+AML-004,New Destination,First-time destination country for a customer should be combined with transaction amount and KYC risk before decision.,behavior,MEDIUM
+AML-005,Large Crypto Transfer,"Crypto transfers above USD 250,000 require wallet review and sanctions screening.",crypto,HIGH
+AML-006,Opaque Merchant,"Large payments to consulting, charity, or unknown categories require invoice and beneficial owner review.",merchant,MEDIUM
+AML-007,Prior SAR Customer,Customers with prior SAR activity require lower escalation thresholds.,customer_history,HIGH
+AML-008,HNI Advisor Payment,"HNI advisor-initiated payments above USD 1,000,000 require advisor confirmation and purpose validation.",hni,MEDIUM
+AML-009,Rapid Movement,Multiple large transactions within 24 hours can indicate layering activity.,velocity,HIGH
+AML-010,Cross Border Wires,"Cross-border wires over USD 500,000 should be checked against customer expected activity.",wire,MEDIUM

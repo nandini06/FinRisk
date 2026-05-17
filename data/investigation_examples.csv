@@ -1,0 +1,1001 @@
+example_id,transaction_id,expected_risk_level,gold_explanation,recommended_action
+INV-0001,TXN-004173,LOW,KYC risk score is 0.372 and country risk score is 1.,No action required
+INV-0002,TXN-000302,HIGH,Matched rules: R-003 customer behavior deviation; R-005 opaque merchant category Amount is 54.0x customer average. Destination country is new for customer. KYC risk score is 0.195 and country risk score is 3.,Escalate to manual review
+INV-0003,TXN-001293,LOW,KYC risk score is 0.069 and country risk score is 3.,No action required
+INV-0004,TXN-003220,HIGH,Matched rules: R-003 customer behavior deviation; R-005 opaque merchant category Amount is 40.68x customer average. Destination country is new for customer. KYC risk score is 0.142 and country risk score is 3.,Escalate to manual review
+INV-0005,TXN-004001,LOW,KYC risk score is 0.3 and country risk score is 1.,No action required
+INV-0006,TXN-000475,HIGH,Matched rules: R-003 customer behavior deviation Amount is 77.62x customer average. Destination country is new for customer. KYC risk score is 0.213 and country risk score is 3.,Escalate to manual review
+INV-0007,TXN-004869,HIGH,Matched rules: R-002 high-risk jurisdiction; R-003 customer behavior deviation Amount is 84.15x customer average. Destination country is new for customer. KYC risk score is 0.09 and country risk score is 5.,Escalate to manual review
+INV-0008,TXN-002371,LOW,KYC risk score is 0.421 and country risk score is 2.,No action required
+INV-0009,TXN-003336,LOW,KYC risk score is 0.192 and country risk score is 1.,No action required
+INV-0010,TXN-000571,LOW,Matched rules: R-005 opaque merchant category KYC risk score is 0.152 and country risk score is 3.,No action required
+INV-0011,TXN-004565,LOW,KYC risk score is 0.453 and country risk score is 2.,No action required
+INV-0012,TXN-003489,LOW,KYC risk score is 0.216 and country risk score is 1.,No action required
+INV-0013,TXN-003787,MEDIUM,KYC risk score is 0.405 and country risk score is 3.,Request additional information
+INV-0014,TXN-003964,LOW,KYC risk score is 0.281 and country risk score is 1.,No action required
+INV-0015,TXN-000719,HIGH,Matched rules: R-003 customer behavior deviation Amount is 31.79x customer average. Destination country is new for customer. KYC risk score is 0.183 and country risk score is 3.,Escalate to manual review
+INV-0016,TXN-003335,LOW,KYC risk score is 0.158 and country risk score is 2.,No action required
+INV-0017,TXN-002282,LOW,KYC risk score is 0.068 and country risk score is 1.,No action required
+INV-0018,TXN-000596,LOW,KYC risk score is 0.21 and country risk score is 3.,No action required
+INV-0019,TXN-004252,LOW,KYC risk score is 0.143 and country risk score is 2.,No action required
+INV-0020,TXN-001014,HIGH,Matched rules: R-002 high-risk jurisdiction Destination country is new for customer. KYC risk score is 0.306 and country risk score is 5.,Escalate to manual review
+INV-0021,TXN-002153,LOW,KYC risk score is 0.312 and country risk score is 3.,No action required
+INV-0022,TXN-003441,LOW,KYC risk score is 0.179 and country risk score is 2.,No action required
+INV-0023,TXN-000426,HIGH,Matched rules: R-003 customer behavior deviation; R-004 large crypto transfer Amount is 68.13x customer average. KYC risk score is 0.215 and country risk score is 3.,Escalate to manual review
+INV-0024,TXN-002094,LOW,KYC risk score is 0.308 and country risk score is 1.,No action required
+INV-0025,TXN-004719,LOW,KYC risk score is 0.234 and country risk score is 3.,No action required
+INV-0026,TXN-004741,LOW,KYC risk score is 0.128 and country risk score is 1.,No action required
+INV-0027,TXN-000714,LOW,KYC risk score is 0.089 and country risk score is 3.,No action required
+INV-0028,TXN-001240,HIGH,Matched rules: R-002 high-risk jurisdiction; R-003 customer behavior deviation Amount is 22.0x customer average. Destination country is new for customer. KYC risk score is 0.349 and country risk score is 4.,Escalate to manual review
+INV-0029,TXN-004801,LOW,KYC risk score is 0.307 and country risk score is 2.,No action required
+INV-0030,TXN-001821,MEDIUM,KYC risk score is 0.372 and country risk score is 3.,Request additional information
+INV-0031,TXN-003517,LOW,KYC risk score is 0.202 and country risk score is 2.,No action required
+INV-0032,TXN-001640,LOW,KYC risk score is 0.339 and country risk score is 1.,No action required
+INV-0033,TXN-001190,LOW,KYC risk score is 0.494 and country risk score is 1.,No action required
+INV-0034,TXN-001206,LOW,KYC risk score is 0.158 and country risk score is 1.,No action required
+INV-0035,TXN-004250,LOW,KYC risk score is 0.235 and country risk score is 1.,No action required
+INV-0036,TXN-000242,LOW,KYC risk score is 0.211 and country risk score is 3.,No action required
+INV-0037,TXN-001371,MEDIUM,KYC risk score is 0.543 and country risk score is 3.,Request additional information
+INV-0038,TXN-004971,HIGH,Matched rules: R-002 high-risk jurisdiction Destination country is new for customer. KYC risk score is 0.559 and country risk score is 5.,Escalate to manual review
+INV-0039,TXN-003670,LOW,KYC risk score is 0.331 and country risk score is 3.,No action required
+INV-0040,TXN-004923,LOW,KYC risk score is 0.127 and country risk score is 1.,No action required
+INV-0041,TXN-004184,LOW,KYC risk score is 0.063 and country risk score is 3.,No action required
+INV-0042,TXN-000038,HIGH,Matched rules: R-003 customer behavior deviation Amount is 34.34x customer average. Destination country is new for customer. KYC risk score is 0.25 and country risk score is 3.,Escalate to manual review
+INV-0043,TXN-000599,LOW,KYC risk score is 0.053 and country risk score is 3.,No action required
+INV-0044,TXN-001741,MEDIUM,KYC risk score is 0.147 and country risk score is 3.,Request additional information
+INV-0045,TXN-002436,HIGH,Matched rules: R-003 customer behavior deviation; R-005 opaque merchant category Amount is 59.98x customer average. Destination country is new for customer. KYC risk score is 0.311 and country risk score is 3.,Escalate to manual review
+INV-0046,TXN-003980,HIGH,Matched rules: R-002 high-risk jurisdiction; R-003 customer behavior deviation; R-004 large crypto transfer Amount is 67.27x customer average. Destination country is new for customer. KYC risk score is 0.249 and country risk score is 4.,Escalate to manual review
+INV-0047,TXN-001237,LOW,KYC risk score is 0.382 and country risk score is 3.,No action required
+INV-0048,TXN-000347,LOW,KYC risk score is 0.278 and country risk score is 3.,No action required
+INV-0049,TXN-004627,LOW,KYC risk score is 0.069 and country risk score is 2.,No action required
+INV-0050,TXN-003556,MEDIUM,Destination country is new for customer. KYC risk score is 0.315 and country risk score is 2.,Request additional information
+INV-0051,TXN-004015,HIGH,Matched rules: R-003 customer behavior deviation Amount is 29.22x customer average. Destination country is new for customer. KYC risk score is 0.459 and country risk score is 3.,Escalate to manual review
+INV-0052,TXN-002003,LOW,KYC risk score is 0.155 and country risk score is 1.,No action required
+INV-0053,TXN-004410,HIGH,Matched rules: R-002 high-risk jurisdiction; R-003 customer behavior deviation; R-004 large crypto transfer; R-005 opaque merchant category Amount is 18.22x customer average. Destination country is new for customer. KYC risk score is 0.309 and country risk score is 5.,Escalate to manual review
+INV-0054,TXN-003457,MEDIUM,KYC risk score is 0.546 and country risk score is 3.,Request additional information
+INV-0055,TXN-003173,LOW,KYC risk score is 0.339 and country risk score is 1.,No action required
+INV-0056,TXN-003956,LOW,KYC risk score is 0.401 and country risk score is 2.,No action required
+INV-0057,TXN-002826,LOW,KYC risk score is 0.089 and country risk score is 3.,No action required
+INV-0058,TXN-000554,LOW,KYC risk score is 0.088 and country risk score is 3.,No action required
+INV-0059,TXN-003532,MEDIUM,Destination country is new for customer. KYC risk score is 0.445 and country risk score is 1.,Request additional information
+INV-0060,TXN-003067,LOW,KYC risk score is 0.107 and country risk score is 2.,No action required
+INV-0061,TXN-001719,LOW,KYC risk score is 0.104 and country risk score is 2.,No action required
+INV-0062,TXN-003635,MEDIUM,Matched rules: R-002 high-risk jurisdiction Destination country is new for customer. KYC risk score is 0.138 and country risk score is 4.,Request additional information
+INV-0063,TXN-003178,LOW,KYC risk score is 0.234 and country risk score is 2.,No action required
+INV-0064,TXN-003747,LOW,KYC risk score is 0.068 and country risk score is 1.,No action required
+INV-0065,TXN-000207,LOW,KYC risk score is 0.096 and country risk score is 1.,No action required
+INV-0066,TXN-001986,LOW,KYC risk score is 0.129 and country risk score is 1.,No action required
+INV-0067,TXN-001418,HIGH,Matched rules: R-001 high-value cash payment; R-003 customer behavior deviation Amount is 89.49x customer average. Destination country is new for customer. KYC risk score is 0.152 and country risk score is 3.,Escalate to manual review
+INV-0068,TXN-003941,MEDIUM,Matched rules: R-002 high-risk jurisdiction Destination country is new for customer. KYC risk score is 0.403 and country risk score is 4.,Request additional information
+INV-0069,TXN-002472,MEDIUM,KYC risk score is 0.375 and country risk score is 3.,Request additional information
+INV-0070,TXN-004879,LOW,KYC risk score is 0.226 and country risk score is 3.,No action required
+INV-0071,TXN-000704,LOW,KYC risk score is 0.285 and country risk score is 1.,No action required
+INV-0072,TXN-002433,LOW,KYC risk score is 0.101 and country risk score is 1.,No action required
+INV-0073,TXN-001899,LOW,KYC risk score is 0.349 and country risk score is 3.,No action required
+INV-0074,TXN-004461,LOW,KYC risk score is 0.335 and country risk score is 1.,No action required
+INV-0075,TXN-001941,LOW,KYC risk score is 0.543 and country risk score is 1.,No action required
+INV-0076,TXN-003625,LOW,KYC risk score is 0.214 and country risk score is 2.,No action required
+INV-0077,TXN-002616,MEDIUM,KYC risk score is 0.345 and country risk score is 2.,Request additional information
+INV-0078,TXN-000008,LOW,KYC risk score is 0.249 and country risk score is 3.,No action required
+INV-0079,TXN-002809,LOW,KYC risk score is 0.228 and country risk score is 3.,No action required
+INV-0080,TXN-001799,HIGH,Matched rules: R-003 customer behavior deviation; R-005 opaque merchant category Amount is 32.38x customer average. Destination country is new for customer. KYC risk score is 0.279 and country risk score is 3.,Escalate to manual review
+INV-0081,TXN-000114,LOW,KYC risk score is 0.128 and country risk score is 1.,No action required
+INV-0082,TXN-004510,MEDIUM,KYC risk score is 0.364 and country risk score is 3.,Request additional information
+INV-0083,TXN-001573,LOW,KYC risk score is 0.185 and country risk score is 1.,No action required
+INV-0084,TXN-001742,LOW,KYC risk score is 0.152 and country risk score is 2.,No action required
+INV-0085,TXN-003079,LOW,KYC risk score is 0.147 and country risk score is 3.,No action required
+INV-0086,TXN-000303,LOW,KYC risk score is 0.248 and country risk score is 2.,No action required
+INV-0087,TXN-000843,MEDIUM,KYC risk score is 0.449 and country risk score is 3.,Request additional information
+INV-0088,TXN-002401,MEDIUM,Matched rules: R-002 high-risk jurisdiction Destination country is new for customer. KYC risk score is 0.146 and country risk score is 4.,Request additional information
+INV-0089,TXN-003518,MEDIUM,Matched rules: R-002 high-risk jurisdiction Destination country is new for customer. KYC risk score is 0.182 and country risk score is 4.,Request additional information
+INV-0090,TXN-004013,LOW,KYC risk score is 0.327 and country risk score is 2.,No action required
+INV-0091,TXN-000917,LOW,KYC risk score is 0.114 and country risk score is 1.,No action required
+INV-0092,TXN-002871,LOW,KYC risk score is 0.34 and country risk score is 3.,No action required
+INV-0093,TXN-000621,LOW,KYC risk score is 0.532 and country risk score is 1.,No action required
+INV-0094,TXN-000679,LOW,KYC risk score is 0.309 and country risk score is 3.,No action required
+INV-0095,TXN-004423,HIGH,Matched rules: R-003 customer behavior deviation Amount is 66.67x customer average. Destination country is new for customer. KYC risk score is 0.185 and country risk score is 3.,Escalate to manual review
+INV-0096,TXN-004596,LOW,KYC risk score is 0.258 and country risk score is 3.,No action required
+INV-0097,TXN-004229,LOW,KYC risk score is 0.249 and country risk score is 2.,No action required
+INV-0098,TXN-004559,LOW,KYC risk score is 0.233 and country risk score is 2.,No action required
+INV-0099,TXN-001508,LOW,KYC risk score is 0.258 and country risk score is 3.,No action required
+INV-0100,TXN-003999,LOW,KYC risk score is 0.088 and country risk score is 2.,No action required
+INV-0101,TXN-000430,HIGH,Matched rules: R-003 customer behavior deviation Amount is 57.4x customer average. Destination country is new for customer. KYC risk score is 0.124 and country risk score is 3.,Escalate to manual review
+INV-0102,TXN-001973,HIGH,Matched rules: R-002 high-risk jurisdiction; R-003 customer behavior deviation Amount is 66.33x customer average. Destination country is new for customer. KYC risk score is 0.304 and country risk score is 4.,Escalate to manual review
+INV-0103,TXN-001305,LOW,KYC risk score is 0.155 and country risk score is 1.,No action required
+INV-0104,TXN-001391,LOW,KYC risk score is 0.153 and country risk score is 2.,No action required
+INV-0105,TXN-002431,LOW,KYC risk score is 0.255 and country risk score is 3.,No action required
+INV-0106,TXN-004143,LOW,KYC risk score is 0.185 and country risk score is 3.,No action required
+INV-0107,TXN-000528,LOW,KYC risk score is 0.063 and country risk score is 2.,No action required
+INV-0108,TXN-001939,MEDIUM,KYC risk score is 0.375 and country risk score is 3.,Request additional information
+INV-0109,TXN-003086,LOW,KYC risk score is 0.198 and country risk score is 2.,No action required
+INV-0110,TXN-000320,LOW,KYC risk score is 0.237 and country risk score is 1.,No action required
+INV-0111,TXN-002505,LOW,KYC risk score is 0.107 and country risk score is 2.,No action required
+INV-0112,TXN-001600,LOW,KYC risk score is 0.138 and country risk score is 3.,No action required
+INV-0113,TXN-003680,MEDIUM,KYC risk score is 0.337 and country risk score is 1.,Request additional information
+INV-0114,TXN-002194,LOW,KYC risk score is 0.06 and country risk score is 1.,No action required
+INV-0115,TXN-002821,LOW,KYC risk score is 0.135 and country risk score is 1.,No action required
+INV-0116,TXN-003025,LOW,KYC risk score is 0.313 and country risk score is 3.,No action required
+INV-0117,TXN-003679,LOW,KYC risk score is 0.152 and country risk score is 1.,No action required
+INV-0118,TXN-003237,LOW,KYC risk score is 0.382 and country risk score is 3.,No action required
+INV-0119,TXN-003575,HIGH,Matched rules: R-003 customer behavior deviation; R-005 opaque merchant category Amount is 79.69x customer average. Destination country is new for customer. KYC risk score is 0.19 and country risk score is 3.,Escalate to manual review
+INV-0120,TXN-002026,MEDIUM,KYC risk score is 0.444 and country risk score is 3.,Request additional information
+INV-0121,TXN-004668,MEDIUM,KYC risk score is 0.11 and country risk score is 3.,Request additional information
+INV-0122,TXN-002485,LOW,KYC risk score is 0.559 and country risk score is 1.,No action required
+INV-0123,TXN-000146,MEDIUM,KYC risk score is 0.173 and country risk score is 3.,Request additional information
+INV-0124,TXN-004392,LOW,KYC risk score is 0.193 and country risk score is 1.,No action required
+INV-0125,TXN-000698,LOW,KYC risk score is 0.244 and country risk score is 3.,No action required
+INV-0126,TXN-004678,MEDIUM,KYC risk score is 0.538 and country risk score is 2.,Request additional information
+INV-0127,TXN-001068,MEDIUM,Matched rules: R-002 high-risk jurisdiction Destination country is new for customer. KYC risk score is 0.181 and country risk score is 4.,Request additional information
+INV-0128,TXN-004070,LOW,KYC risk score is 0.149 and country risk score is 3.,No action required
+INV-0129,TXN-002717,LOW,KYC risk score is 0.189 and country risk score is 3.,No action required
+INV-0130,TXN-004153,LOW,KYC risk score is 0.234 and country risk score is 2.,No action required
+INV-0131,TXN-002246,LOW,KYC risk score is 0.097 and country risk score is 2.,No action required
+INV-0132,TXN-004268,LOW,KYC risk score is 0.22 and country risk score is 3.,No action required
+INV-0133,TXN-001287,LOW,KYC risk score is 0.2 and country risk score is 1.,No action required
+INV-0134,TXN-004004,LOW,KYC risk score is 0.249 and country risk score is 3.,No action required
+INV-0135,TXN-003611,LOW,KYC risk score is 0.125 and country risk score is 2.,No action required
+INV-0136,TXN-003022,LOW,KYC risk score is 0.065 and country risk score is 3.,No action required
+INV-0137,TXN-004857,HIGH,Matched rules: R-003 customer behavior deviation; R-005 opaque merchant category Amount is 18.35x customer average. Destination country is new for customer. KYC risk score is 0.189 and country risk score is 3.,Escalate to manual review
+INV-0138,TXN-003701,LOW,KYC risk score is 0.307 and country risk score is 1.,No action required
+INV-0139,TXN-004945,LOW,KYC risk score is 0.18 and country risk score is 1.,No action required
+INV-0140,TXN-001524,LOW,KYC risk score is 0.34 and country risk score is 3.,No action required
+INV-0141,TXN-001400,LOW,KYC risk score is 0.053 and country risk score is 3.,No action required
+INV-0142,TXN-003804,LOW,KYC risk score is 0.349 and country risk score is 3.,No action required
+INV-0143,TXN-000428,LOW,KYC risk score is 0.255 and country risk score is 3.,No action required
+INV-0144,TXN-000681,LOW,KYC risk score is 0.409 and country risk score is 3.,No action required
+INV-0145,TXN-004841,LOW,KYC risk score is 0.096 and country risk score is 3.,No action required
+INV-0146,TXN-001236,LOW,KYC risk score is 0.183 and country risk score is 2.,No action required
+INV-0147,TXN-002089,LOW,KYC risk score is 0.447 and country risk score is 1.,No action required
+INV-0148,TXN-003076,LOW,KYC risk score is 0.396 and country risk score is 1.,No action required
+INV-0149,TXN-003796,HIGH,Matched rules: R-002 high-risk jurisdiction; R-003 customer behavior deviation Amount is 85.44x customer average. Destination country is new for customer. KYC risk score is 0.061 and country risk score is 4.,Escalate to manual review
+INV-0150,TXN-002909,LOW,KYC risk score is 0.322 and country risk score is 2.,No action required
+INV-0151,TXN-002578,LOW,KYC risk score is 0.06 and country risk score is 1.,No action required
+INV-0152,TXN-003966,LOW,KYC risk score is 0.257 and country risk score is 2.,No action required
+INV-0153,TXN-003137,LOW,KYC risk score is 0.359 and country risk score is 3.,No action required
+INV-0154,TXN-001684,LOW,KYC risk score is 0.445 and country risk score is 1.,No action required
+INV-0155,TXN-002016,LOW,KYC risk score is 0.191 and country risk score is 1.,No action required
+INV-0156,TXN-003888,HIGH,Matched rules: R-003 customer behavior deviation; R-005 opaque merchant category Amount is 75.85x customer average. KYC risk score is 0.053 and country risk score is 3.,Escalate to manual review
+INV-0157,TXN-000983,LOW,KYC risk score is 0.259 and country risk score is 1.,No action required
+INV-0158,TXN-000585,MEDIUM,Matched rules: R-005 opaque merchant category KYC risk score is 0.504 and country risk score is 3.,Request additional information
+INV-0159,TXN-004921,LOW,KYC risk score is 0.117 and country risk score is 1.,No action required
+INV-0160,TXN-001646,HIGH,Matched rules: R-002 high-risk jurisdiction; R-003 customer behavior deviation Amount is 63.4x customer average. Destination country is new for customer. KYC risk score is 0.29 and country risk score is 5.,Escalate to manual review
+INV-0161,TXN-002615,HIGH,Matched rules: R-003 customer behavior deviation Amount is 19.0x customer average. Destination country is new for customer. KYC risk score is 0.207 and country risk score is 3.,Escalate to manual review
+INV-0162,TXN-000969,LOW,KYC risk score is 0.467 and country risk score is 2.,No action required
+INV-0163,TXN-003800,MEDIUM,KYC risk score is 0.141 and country risk score is 3.,Request additional information
+INV-0164,TXN-000252,MEDIUM,Matched rules: R-002 high-risk jurisdiction Destination country is new for customer. KYC risk score is 0.234 and country risk score is 4.,Request additional information
+INV-0165,TXN-004525,LOW,KYC risk score is 0.249 and country risk score is 1.,No action required
+INV-0166,TXN-003734,LOW,KYC risk score is 0.181 and country risk score is 3.,No action required
+INV-0167,TXN-000908,LOW,KYC risk score is 0.331 and country risk score is 2.,No action required
+INV-0168,TXN-003411,LOW,KYC risk score is 0.335 and country risk score is 2.,No action required
+INV-0169,TXN-002567,LOW,KYC risk score is 0.285 and country risk score is 1.,No action required
+INV-0170,TXN-000434,MEDIUM,Matched rules: R-002 high-risk jurisdiction Destination country is new for customer. KYC risk score is 0.158 and country risk score is 4.,Request additional information
+INV-0171,TXN-004328,LOW,KYC risk score is 0.275 and country risk score is 3.,No action required
+INV-0172,TXN-000900,LOW,KYC risk score is 0.125 and country risk score is 2.,No action required
+INV-0173,TXN-003832,MEDIUM,Matched rules: R-002 high-risk jurisdiction Destination country is new for customer. KYC risk score is 0.053 and country risk score is 5.,Request additional information
+INV-0174,TXN-000406,MEDIUM,KYC risk score is 0.244 and country risk score is 3.,Request additional information
+INV-0175,TXN-001670,LOW,KYC risk score is 0.227 and country risk score is 3.,No action required
+INV-0176,TXN-003600,LOW,KYC risk score is 0.11 and country risk score is 1.,No action required
+INV-0177,TXN-003240,LOW,KYC risk score is 0.227 and country risk score is 2.,No action required
+INV-0178,TXN-000560,LOW,KYC risk score is 0.149 and country risk score is 3.,No action required
+INV-0179,TXN-001778,LOW,KYC risk score is 0.202 and country risk score is 2.,No action required
+INV-0180,TXN-002681,LOW,KYC risk score is 0.125 and country risk score is 1.,No action required
+INV-0181,TXN-001336,MEDIUM,KYC risk score is 0.092 and country risk score is 3.,Request additional information
+INV-0182,TXN-002359,MEDIUM,KYC risk score is 0.139 and country risk score is 3.,Request additional information
+INV-0183,TXN-001251,HIGH,Matched rules: R-002 high-risk jurisdiction; R-003 customer behavior deviation Amount is 71.05x customer average. Destination country is new for customer. KYC risk score is 0.167 and country risk score is 4.,Escalate to manual review
+INV-0184,TXN-004515,MEDIUM,KYC risk score is 0.231 and country risk score is 3.,Request additional information
+INV-0185,TXN-003507,MEDIUM,KYC risk score is 0.21 and country risk score is 3.,Request additional information
+INV-0186,TXN-004754,MEDIUM,Destination country is new for customer. KYC risk score is 0.257 and country risk score is 3.,Request additional information
+INV-0187,TXN-002255,LOW,KYC risk score is 0.257 and country risk score is 2.,No action required
+INV-0188,TXN-002700,MEDIUM,KYC risk score is 0.405 and country risk score is 2.,Request additional information
+INV-0189,TXN-001969,MEDIUM,KYC risk score is 0.538 and country risk score is 1.,Request additional information
+INV-0190,TXN-004456,LOW,Destination country is new for customer. KYC risk score is 0.349 and country risk score is 1.,No action required
+INV-0191,TXN-002121,LOW,KYC risk score is 0.198 and country risk score is 1.,No action required
+INV-0192,TXN-002813,LOW,KYC risk score is 0.189 and country risk score is 2.,No action required
+INV-0193,TXN-002437,HIGH,Matched rules: R-003 customer behavior deviation Amount is 59.45x customer average. Destination country is new for customer. KYC risk score is 0.327 and country risk score is 3.,Escalate to manual review
+INV-0194,TXN-001330,LOW,KYC risk score is 0.31 and country risk score is 3.,No action required
+INV-0195,TXN-003805,LOW,Destination country is new for customer. KYC risk score is 0.158 and country risk score is 1.,No action required
+INV-0196,TXN-001094,LOW,KYC risk score is 0.054 and country risk score is 1.,No action required
+INV-0197,TXN-002281,LOW,KYC risk score is 0.181 and country risk score is 2.,No action required
+INV-0198,TXN-002230,HIGH,Matched rules: R-003 customer behavior deviation Amount is 27.46x customer average. KYC risk score is 0.337 and country risk score is 3.,Escalate to manual review
+INV-0199,TXN-003588,MEDIUM,KYC risk score is 0.333 and country risk score is 3.,Request additional information
+INV-0200,TXN-002833,LOW,KYC risk score is 0.103 and country risk score is 2.,No action required
+INV-0201,TXN-001662,LOW,KYC risk score is 0.21 and country risk score is 3.,No action required
+INV-0202,TXN-004544,LOW,KYC risk score is 0.13 and country risk score is 2.,No action required
+INV-0203,TXN-003668,LOW,KYC risk score is 0.297 and country risk score is 1.,No action required
+INV-0204,TXN-004773,LOW,KYC risk score is 0.211 and country risk score is 1.,No action required
+INV-0205,TXN-001089,MEDIUM,KYC risk score is 0.405 and country risk score is 2.,Request additional information
+INV-0206,TXN-000277,LOW,KYC risk score is 0.249 and country risk score is 1.,No action required
+INV-0207,TXN-000736,LOW,KYC risk score is 0.185 and country risk score is 3.,No action required
+INV-0208,TXN-002314,LOW,KYC risk score is 0.095 and country risk score is 2.,No action required
+INV-0209,TXN-004244,LOW,KYC risk score is 0.184 and country risk score is 3.,No action required
+INV-0210,TXN-001214,HIGH,Matched rules: R-003 customer behavior deviation; R-005 opaque merchant category Amount is 68.6x customer average. Destination country is new for customer. KYC risk score is 0.278 and country risk score is 3.,Escalate to manual review
+INV-0211,TXN-001376,LOW,KYC risk score is 0.285 and country risk score is 3.,No action required
+INV-0212,TXN-001630,LOW,KYC risk score is 0.381 and country risk score is 2.,No action required
+INV-0213,TXN-003959,LOW,KYC risk score is 0.183 and country risk score is 1.,No action required
+INV-0214,TXN-001475,MEDIUM,Destination country is new for customer. KYC risk score is 0.269 and country risk score is 3.,Request additional information
+INV-0215,TXN-003008,LOW,KYC risk score is 0.336 and country risk score is 3.,No action required
+INV-0216,TXN-004692,LOW,KYC risk score is 0.107 and country risk score is 1.,No action required
+INV-0217,TXN-004920,LOW,KYC risk score is 0.138 and country risk score is 1.,No action required
+INV-0218,TXN-003123,MEDIUM,KYC risk score is 0.559 and country risk score is 3.,Request additional information
+INV-0219,TXN-004373,LOW,KYC risk score is 0.149 and country risk score is 3.,No action required
+INV-0220,TXN-003363,LOW,KYC risk score is 0.181 and country risk score is 3.,No action required
+INV-0221,TXN-002636,LOW,KYC risk score is 0.196 and country risk score is 1.,No action required
+INV-0222,TXN-000069,LOW,KYC risk score is 0.35 and country risk score is 2.,No action required
+INV-0223,TXN-003109,HIGH,Destination country is new for customer. KYC risk score is 0.333 and country risk score is 3.,Escalate to manual review
+INV-0224,TXN-003420,LOW,KYC risk score is 0.069 and country risk score is 1.,No action required
+INV-0225,TXN-000210,LOW,KYC risk score is 0.11 and country risk score is 3.,No action required
+INV-0226,TXN-000989,LOW,KYC risk score is 0.216 and country risk score is 2.,No action required
+INV-0227,TXN-000702,LOW,KYC risk score is 0.286 and country risk score is 3.,No action required
+INV-0228,TXN-003294,LOW,KYC risk score is 0.149 and country risk score is 2.,No action required
+INV-0229,TXN-002830,LOW,KYC risk score is 0.184 and country risk score is 3.,No action required
+INV-0230,TXN-002759,LOW,KYC risk score is 0.258 and country risk score is 2.,No action required
+INV-0231,TXN-004310,LOW,KYC risk score is 0.096 and country risk score is 3.,No action required
+INV-0232,TXN-003267,LOW,KYC risk score is 0.214 and country risk score is 2.,No action required
+INV-0233,TXN-002899,LOW,KYC risk score is 0.215 and country risk score is 3.,No action required
+INV-0234,TXN-000776,HIGH,Matched rules: R-002 high-risk jurisdiction; R-003 customer behavior deviation; R-005 opaque merchant category Amount is 68.41x customer average. Destination country is new for customer. KYC risk score is 0.063 and country risk score is 5.,Escalate to manual review
+INV-0235,TXN-000669,LOW,KYC risk score is 0.259 and country risk score is 2.,No action required
+INV-0236,TXN-002837,LOW,KYC risk score is 0.257 and country risk score is 1.,No action required
+INV-0237,TXN-000239,MEDIUM,Matched rules: R-002 high-risk jurisdiction Destination country is new for customer. KYC risk score is 0.182 and country risk score is 4.,Request additional information
+INV-0238,TXN-001949,MEDIUM,KYC risk score is 0.197 and country risk score is 3.,Request additional information
+INV-0239,TXN-002654,LOW,KYC risk score is 0.061 and country risk score is 3.,No action required
+INV-0240,TXN-002984,HIGH,Matched rules: R-002 high-risk jurisdiction; R-003 customer behavior deviation Amount is 11.48x customer average. Destination country is new for customer. KYC risk score is 0.258 and country risk score is 4.,Escalate to manual review
+INV-0241,TXN-003031,MEDIUM,Matched rules: R-002 high-risk jurisdiction Destination country is new for customer. KYC risk score is 0.228 and country risk score is 4.,Request additional information
+INV-0242,TXN-004527,LOW,KYC risk score is 0.175 and country risk score is 1.,No action required
+INV-0243,TXN-000844,LOW,KYC risk score is 0.234 and country risk score is 3.,No action required
+INV-0244,TXN-000458,LOW,KYC risk score is 0.36 and country risk score is 3.,No action required
+INV-0245,TXN-000420,LOW,KYC risk score is 0.208 and country risk score is 1.,No action required
+INV-0246,TXN-003408,HIGH,Matched rules: R-002 high-risk jurisdiction; R-003 customer behavior deviation; R-005 opaque merchant category Amount is 17.72x customer average. Destination country is new for customer. KYC risk score is 0.292 and country risk score is 4.,Escalate to manual review
+INV-0247,TXN-003276,HIGH,Matched rules: R-002 high-risk jurisdiction Destination country is new for customer. KYC risk score is 0.272 and country risk score is 4.,Escalate to manual review
+INV-0248,TXN-000244,LOW,KYC risk score is 0.097 and country risk score is 2.,No action required
+INV-0249,TXN-002913,LOW,KYC risk score is 0.063 and country risk score is 3.,No action required
+INV-0250,TXN-003469,LOW,KYC risk score is 0.306 and country risk score is 2.,No action required
+INV-0251,TXN-003962,LOW,KYC risk score is 0.405 and country risk score is 2.,No action required
+INV-0252,TXN-003933,LOW,KYC risk score is 0.342 and country risk score is 1.,No action required
+INV-0253,TXN-001522,HIGH,Matched rules: R-003 customer behavior deviation; R-005 opaque merchant category Amount is 74.95x customer average. Destination country is new for customer. KYC risk score is 0.09 and country risk score is 3.,Escalate to manual review
+INV-0254,TXN-000860,LOW,KYC risk score is 0.225 and country risk score is 1.,No action required
+INV-0255,TXN-001539,LOW,KYC risk score is 0.522 and country risk score is 1.,No action required
+INV-0256,TXN-000329,LOW,KYC risk score is 0.312 and country risk score is 1.,No action required
+INV-0257,TXN-004404,MEDIUM,KYC risk score is 0.186 and country risk score is 2.,Request additional information
+INV-0258,TXN-002240,LOW,KYC risk score is 0.349 and country risk score is 1.,No action required
+INV-0259,TXN-001752,LOW,KYC risk score is 0.314 and country risk score is 1.,No action required
+INV-0260,TXN-004424,LOW,KYC risk score is 0.06 and country risk score is 2.,No action required
+INV-0261,TXN-000282,MEDIUM,KYC risk score is 0.48 and country risk score is 3.,Request additional information
+INV-0262,TXN-000200,LOW,KYC risk score is 0.181 and country risk score is 1.,No action required
+INV-0263,TXN-003483,LOW,Destination country is new for customer. KYC risk score is 0.257 and country risk score is 1.,No action required
+INV-0264,TXN-002013,LOW,KYC risk score is 0.278 and country risk score is 1.,No action required
+INV-0265,TXN-004989,HIGH,Destination country is new for customer. KYC risk score is 0.332 and country risk score is 3.,Escalate to manual review
+INV-0266,TXN-004937,HIGH,KYC risk score is 0.342 and country risk score is 2.,Escalate to manual review
+INV-0267,TXN-001917,LOW,KYC risk score is 0.377 and country risk score is 3.,No action required
+INV-0268,TXN-004048,LOW,KYC risk score is 0.349 and country risk score is 3.,No action required
+INV-0269,TXN-004339,LOW,KYC risk score is 0.296 and country risk score is 2.,No action required
+INV-0270,TXN-001131,MEDIUM,KYC risk score is 0.447 and country risk score is 1.,Request additional information
+INV-0271,TXN-001998,LOW,KYC risk score is 0.179 and country risk score is 3.,No action required
+INV-0272,TXN-004793,LOW,KYC risk score is 0.304 and country risk score is 2.,No action required
+INV-0273,TXN-000935,LOW,KYC risk score is 0.306 and country risk score is 2.,No action required
+INV-0274,TXN-000110,LOW,KYC risk score is 0.13 and country risk score is 2.,No action required
+INV-0275,TXN-004943,LOW,KYC risk score is 0.345 and country risk score is 1.,No action required
+INV-0276,TXN-004092,LOW,KYC risk score is 0.228 and country risk score is 3.,No action required
+INV-0277,TXN-004320,HIGH,Matched rules: R-003 customer behavior deviation; R-004 large crypto transfer; R-005 opaque merchant category Amount is 83.23x customer average. Destination country is new for customer. KYC risk score is 0.1 and country risk score is 3.,Escalate to manual review
+INV-0278,TXN-003711,LOW,KYC risk score is 0.276 and country risk score is 1.,No action required
+INV-0279,TXN-001384,HIGH,Matched rules: R-003 customer behavior deviation Amount is 18.96x customer average. Destination country is new for customer. KYC risk score is 0.123 and country risk score is 3.,Escalate to manual review
+INV-0280,TXN-000532,HIGH,Matched rules: R-003 customer behavior deviation; R-004 large crypto transfer; R-005 opaque merchant category Amount is 78.69x customer average. Destination country is new for customer. KYC risk score is 0.152 and country risk score is 3.,Escalate to manual review
+INV-0281,TXN-004723,LOW,KYC risk score is 0.069 and country risk score is 1.,No action required
+INV-0282,TXN-000816,LOW,KYC risk score is 0.31 and country risk score is 3.,No action required
+INV-0283,TXN-003141,MEDIUM,KYC risk score is 0.318 and country risk score is 2.,Request additional information
+INV-0284,TXN-001622,LOW,KYC risk score is 0.327 and country risk score is 3.,No action required
+INV-0285,TXN-000055,HIGH,Matched rules: R-002 high-risk jurisdiction; R-003 customer behavior deviation; R-005 opaque merchant category Amount is 44.19x customer average. Destination country is new for customer. KYC risk score is 0.255 and country risk score is 5.,Escalate to manual review
+INV-0286,TXN-000903,LOW,KYC risk score is 0.168 and country risk score is 2.,No action required
+INV-0287,TXN-003540,LOW,KYC risk score is 0.296 and country risk score is 1.,No action required
+INV-0288,TXN-002708,LOW,KYC risk score is 0.124 and country risk score is 3.,No action required
+INV-0289,TXN-000749,MEDIUM,KYC risk score is 0.288 and country risk score is 3.,Request additional information
+INV-0290,TXN-003433,LOW,KYC risk score is 0.266 and country risk score is 1.,No action required
+INV-0291,TXN-004453,HIGH,Matched rules: R-002 high-risk jurisdiction; R-003 customer behavior deviation Amount is 15.43x customer average. Destination country is new for customer. KYC risk score is 0.129 and country risk score is 5.,Escalate to manual review
+INV-0292,TXN-000344,LOW,KYC risk score is 0.228 and country risk score is 3.,No action required
+INV-0293,TXN-000256,LOW,KYC risk score is 0.215 and country risk score is 3.,No action required
+INV-0294,TXN-002211,HIGH,Matched rules: R-003 customer behavior deviation Amount is 15.37x customer average. Destination country is new for customer. KYC risk score is 0.281 and country risk score is 3.,Escalate to manual review
+INV-0295,TXN-003945,MEDIUM,KYC risk score is 0.442 and country risk score is 3.,Request additional information
+INV-0296,TXN-001509,MEDIUM,KYC risk score is 0.319 and country risk score is 3.,Request additional information
+INV-0297,TXN-000834,LOW,KYC risk score is 0.151 and country risk score is 2.,No action required
+INV-0298,TXN-002676,LOW,KYC risk score is 0.488 and country risk score is 1.,No action required
+INV-0299,TXN-001631,LOW,KYC risk score is 0.102 and country risk score is 3.,No action required
+INV-0300,TXN-003865,LOW,KYC risk score is 0.067 and country risk score is 2.,No action required
+INV-0301,TXN-000262,HIGH,Matched rules: R-002 high-risk jurisdiction; R-003 customer behavior deviation; R-004 large crypto transfer Amount is 47.5x customer average. Destination country is new for customer. KYC risk score is 0.409 and country risk score is 5.,Escalate to manual review
+INV-0302,TXN-000168,LOW,KYC risk score is 0.181 and country risk score is 1.,No action required
+INV-0303,TXN-001702,MEDIUM,KYC risk score is 0.327 and country risk score is 3.,Request additional information
+INV-0304,TXN-002707,MEDIUM,KYC risk score is 0.318 and country risk score is 2.,Request additional information
+INV-0305,TXN-004167,LOW,KYC risk score is 0.381 and country risk score is 3.,No action required
+INV-0306,TXN-003687,LOW,KYC risk score is 0.088 and country risk score is 1.,No action required
+INV-0307,TXN-000659,MEDIUM,KYC risk score is 0.353 and country risk score is 1.,Request additional information
+INV-0308,TXN-003972,LOW,Destination country is new for customer. KYC risk score is 0.281 and country risk score is 1.,No action required
+INV-0309,TXN-000481,LOW,KYC risk score is 0.425 and country risk score is 1.,No action required
+INV-0310,TXN-001526,LOW,KYC risk score is 0.25 and country risk score is 2.,No action required
+INV-0311,TXN-000082,LOW,KYC risk score is 0.193 and country risk score is 3.,No action required
+INV-0312,TXN-000431,HIGH,Matched rules: R-003 customer behavior deviation; R-005 opaque merchant category Amount is 32.32x customer average. Destination country is new for customer. KYC risk score is 0.25 and country risk score is 3.,Escalate to manual review
+INV-0313,TXN-002879,LOW,KYC risk score is 0.142 and country risk score is 2.,No action required
+INV-0314,TXN-002684,LOW,KYC risk score is 0.581 and country risk score is 1.,No action required
+INV-0315,TXN-002989,LOW,KYC risk score is 0.3 and country risk score is 1.,No action required
+INV-0316,TXN-000117,HIGH,Matched rules: R-002 high-risk jurisdiction; R-003 customer behavior deviation Amount is 79.52x customer average. Destination country is new for customer. KYC risk score is 0.252 and country risk score is 4.,Escalate to manual review
+INV-0317,TXN-000890,LOW,KYC risk score is 0.088 and country risk score is 3.,No action required
+INV-0318,TXN-003696,LOW,KYC risk score is 0.258 and country risk score is 1.,No action required
+INV-0319,TXN-004334,HIGH,Matched rules: R-002 high-risk jurisdiction Destination country is new for customer. KYC risk score is 0.543 and country risk score is 4.,Escalate to manual review
+INV-0320,TXN-004743,LOW,KYC risk score is 0.477 and country risk score is 1.,No action required
+INV-0321,TXN-000097,LOW,KYC risk score is 0.293 and country risk score is 2.,No action required
+INV-0322,TXN-000467,LOW,KYC risk score is 0.069 and country risk score is 2.,No action required
+INV-0323,TXN-002662,LOW,KYC risk score is 0.451 and country risk score is 1.,No action required
+INV-0324,TXN-001534,HIGH,Matched rules: R-002 high-risk jurisdiction Destination country is new for customer. KYC risk score is 0.269 and country risk score is 5.,Escalate to manual review
+INV-0325,TXN-004829,MEDIUM,KYC risk score is 0.348 and country risk score is 3.,Request additional information
+INV-0326,TXN-004963,HIGH,Matched rules: R-003 customer behavior deviation; R-004 large crypto transfer Amount is 67.23x customer average. Destination country is new for customer. KYC risk score is 0.054 and country risk score is 3.,Escalate to manual review
+INV-0327,TXN-002159,MEDIUM,KYC risk score is 0.311 and country risk score is 3.,Request additional information
+INV-0328,TXN-001184,LOW,KYC risk score is 0.129 and country risk score is 3.,No action required
+INV-0329,TXN-001843,LOW,Destination country is new for customer. KYC risk score is 0.181 and country risk score is 1.,No action required
+INV-0330,TXN-001074,MEDIUM,KYC risk score is 0.166 and country risk score is 3.,Request additional information
+INV-0331,TXN-002911,LOW,KYC risk score is 0.237 and country risk score is 1.,No action required
+INV-0332,TXN-002836,MEDIUM,KYC risk score is 0.385 and country risk score is 3.,Request additional information
+INV-0333,TXN-002170,LOW,KYC risk score is 0.185 and country risk score is 3.,No action required
+INV-0334,TXN-001655,MEDIUM,KYC risk score is 0.199 and country risk score is 2.,Request additional information
+INV-0335,TXN-001613,LOW,KYC risk score is 0.405 and country risk score is 2.,No action required
+INV-0336,TXN-002111,LOW,KYC risk score is 0.129 and country risk score is 3.,No action required
+INV-0337,TXN-004991,LOW,KYC risk score is 0.155 and country risk score is 1.,No action required
+INV-0338,TXN-001402,LOW,KYC risk score is 0.226 and country risk score is 1.,No action required
+INV-0339,TXN-001726,MEDIUM,KYC risk score is 0.199 and country risk score is 2.,Request additional information
+INV-0340,TXN-001427,LOW,KYC risk score is 0.448 and country risk score is 3.,No action required
+INV-0341,TXN-000687,LOW,KYC risk score is 0.227 and country risk score is 1.,No action required
+INV-0342,TXN-002477,LOW,KYC risk score is 0.149 and country risk score is 2.,No action required
+INV-0343,TXN-001632,LOW,KYC risk score is 0.325 and country risk score is 1.,No action required
+INV-0344,TXN-000060,HIGH,Matched rules: R-002 high-risk jurisdiction; R-003 customer behavior deviation; R-005 opaque merchant category Amount is 15.94x customer average. Destination country is new for customer. KYC risk score is 0.278 and country risk score is 5.,Escalate to manual review
+INV-0345,TXN-001156,LOW,KYC risk score is 0.063 and country risk score is 3.,No action required
+INV-0346,TXN-002712,MEDIUM,KYC risk score is 0.097 and country risk score is 3.,Request additional information
+INV-0347,TXN-004222,MEDIUM,KYC risk score is 0.149 and country risk score is 2.,Request additional information
+INV-0348,TXN-002017,HIGH,Matched rules: R-003 customer behavior deviation; R-004 large crypto transfer; R-005 opaque merchant category Amount is 74.1x customer average. Destination country is new for customer. KYC risk score is 0.314 and country risk score is 3.,Escalate to manual review
+INV-0349,TXN-000136,LOW,KYC risk score is 0.522 and country risk score is 1.,No action required
+INV-0350,TXN-001787,LOW,KYC risk score is 0.206 and country risk score is 3.,No action required
+INV-0351,TXN-001957,LOW,KYC risk score is 0.168 and country risk score is 2.,No action required
+INV-0352,TXN-001107,LOW,KYC risk score is 0.097 and country risk score is 1.,No action required
+INV-0353,TXN-001145,HIGH,Matched rules: R-002 high-risk jurisdiction; R-003 customer behavior deviation Amount is 49.67x customer average. Destination country is new for customer. KYC risk score is 0.06 and country risk score is 4.,Escalate to manual review
+INV-0354,TXN-004025,HIGH,Matched rules: R-002 high-risk jurisdiction Destination country is new for customer. KYC risk score is 0.288 and country risk score is 5.,Escalate to manual review
+INV-0355,TXN-003462,LOW,KYC risk score is 0.325 and country risk score is 1.,No action required
+INV-0356,TXN-004749,HIGH,Matched rules: R-003 customer behavior deviation; R-004 large crypto transfer Amount is 28.02x customer average. Destination country is new for customer. KYC risk score is 0.403 and country risk score is 3.,Escalate to manual review
+INV-0357,TXN-000121,LOW,KYC risk score is 0.065 and country risk score is 3.,No action required
+INV-0358,TXN-002092,LOW,KYC risk score is 0.16 and country risk score is 3.,No action required
+INV-0359,TXN-002160,LOW,KYC risk score is 0.295 and country risk score is 3.,No action required
+INV-0360,TXN-002443,LOW,KYC risk score is 0.166 and country risk score is 1.,No action required
+INV-0361,TXN-004068,LOW,KYC risk score is 0.162 and country risk score is 1.,No action required
+INV-0362,TXN-001884,LOW,KYC risk score is 0.063 and country risk score is 3.,No action required
+INV-0363,TXN-000098,LOW,KYC risk score is 0.385 and country risk score is 1.,No action required
+INV-0364,TXN-004957,MEDIUM,KYC risk score is 0.447 and country risk score is 3.,Request additional information
+INV-0365,TXN-004207,HIGH,Matched rules: R-002 high-risk jurisdiction; R-003 customer behavior deviation Amount is 54.51x customer average. Destination country is new for customer. KYC risk score is 0.181 and country risk score is 4.,Escalate to manual review
+INV-0366,TXN-000835,LOW,KYC risk score is 0.215 and country risk score is 3.,No action required
+INV-0367,TXN-000992,MEDIUM,Destination country is new for customer. KYC risk score is 0.36 and country risk score is 2.,Request additional information
+INV-0368,TXN-003645,LOW,KYC risk score is 0.349 and country risk score is 1.,No action required
+INV-0369,TXN-004558,LOW,KYC risk score is 0.256 and country risk score is 2.,No action required
+INV-0370,TXN-004575,HIGH,Matched rules: R-002 high-risk jurisdiction; R-003 customer behavior deviation; R-005 opaque merchant category Amount is 30.41x customer average. Destination country is new for customer. KYC risk score is 0.11 and country risk score is 5.,Escalate to manual review
+INV-0371,TXN-003998,LOW,KYC risk score is 0.227 and country risk score is 3.,No action required
+INV-0372,TXN-003435,LOW,KYC risk score is 0.053 and country risk score is 3.,No action required
+INV-0373,TXN-003120,HIGH,Matched rules: R-002 high-risk jurisdiction; R-003 customer behavior deviation; R-005 opaque merchant category Amount is 48.29x customer average. Destination country is new for customer. KYC risk score is 0.181 and country risk score is 4.,Escalate to manual review
+INV-0374,TXN-003937,MEDIUM,Destination country is new for customer. KYC risk score is 0.297 and country risk score is 3.,Request additional information
+INV-0375,TXN-004323,LOW,KYC risk score is 0.325 and country risk score is 1.,No action required
+INV-0376,TXN-002499,LOW,KYC risk score is 0.263 and country risk score is 1.,No action required
+INV-0377,TXN-002782,LOW,KYC risk score is 0.205 and country risk score is 3.,No action required
+INV-0378,TXN-001689,LOW,KYC risk score is 0.433 and country risk score is 3.,No action required
+INV-0379,TXN-001623,LOW,KYC risk score is 0.258 and country risk score is 3.,No action required
+INV-0380,TXN-002378,LOW,KYC risk score is 0.099 and country risk score is 1.,No action required
+INV-0381,TXN-001567,MEDIUM,KYC risk score is 0.143 and country risk score is 2.,Request additional information
+INV-0382,TXN-002873,LOW,KYC risk score is 0.259 and country risk score is 2.,No action required
+INV-0383,TXN-003769,LOW,KYC risk score is 0.349 and country risk score is 3.,No action required
+INV-0384,TXN-004198,LOW,KYC risk score is 0.102 and country risk score is 1.,No action required
+INV-0385,TXN-002435,LOW,KYC risk score is 0.201 and country risk score is 1.,No action required
+INV-0386,TXN-001795,HIGH,Matched rules: R-002 high-risk jurisdiction; R-003 customer behavior deviation Amount is 66.68x customer average. Destination country is new for customer. KYC risk score is 0.335 and country risk score is 4.,Escalate to manual review
+INV-0387,TXN-003733,MEDIUM,Destination country is new for customer. KYC risk score is 0.233 and country risk score is 3.,Request additional information
+INV-0388,TXN-000323,HIGH,Matched rules: R-002 high-risk jurisdiction; R-003 customer behavior deviation Amount is 12.05x customer average. Destination country is new for customer. KYC risk score is 0.13 and country risk score is 4.,Escalate to manual review
+INV-0389,TXN-000572,LOW,KYC risk score is 0.215 and country risk score is 3.,No action required
+INV-0390,TXN-000603,LOW,KYC risk score is 0.067 and country risk score is 1.,No action required
+INV-0391,TXN-004157,LOW,KYC risk score is 0.221 and country risk score is 3.,No action required
+INV-0392,TXN-000376,LOW,KYC risk score is 0.107 and country risk score is 2.,No action required
+INV-0393,TXN-001621,HIGH,Matched rules: R-003 customer behavior deviation Amount is 69.03x customer average. Destination country is new for customer. KYC risk score is 0.273 and country risk score is 3.,Escalate to manual review
+INV-0394,TXN-000685,LOW,KYC risk score is 0.181 and country risk score is 1.,No action required
+INV-0395,TXN-001677,LOW,KYC risk score is 0.522 and country risk score is 1.,No action required
+INV-0396,TXN-003209,LOW,KYC risk score is 0.31 and country risk score is 1.,No action required
+INV-0397,TXN-003939,LOW,KYC risk score is 0.186 and country risk score is 3.,No action required
+INV-0398,TXN-002673,LOW,KYC risk score is 0.273 and country risk score is 3.,No action required
+INV-0399,TXN-000197,MEDIUM,KYC risk score is 0.141 and country risk score is 3.,Request additional information
+INV-0400,TXN-003454,LOW,KYC risk score is 0.295 and country risk score is 2.,No action required
+INV-0401,TXN-000180,LOW,KYC risk score is 0.168 and country risk score is 3.,No action required
+INV-0402,TXN-002563,LOW,KYC risk score is 0.154 and country risk score is 1.,No action required
+INV-0403,TXN-000493,LOW,KYC risk score is 0.099 and country risk score is 1.,No action required
+INV-0404,TXN-001808,LOW,KYC risk score is 0.097 and country risk score is 3.,No action required
+INV-0405,TXN-001994,LOW,KYC risk score is 0.282 and country risk score is 3.,No action required
+INV-0406,TXN-003065,LOW,KYC risk score is 0.151 and country risk score is 1.,No action required
+INV-0407,TXN-000799,HIGH,Matched rules: R-003 customer behavior deviation Amount is 21.6x customer average. Destination country is new for customer. KYC risk score is 0.445 and country risk score is 3.,Escalate to manual review
+INV-0408,TXN-000923,LOW,KYC risk score is 0.304 and country risk score is 1.,No action required
+INV-0409,TXN-001936,MEDIUM,KYC risk score is 0.186 and country risk score is 3.,Request additional information
+INV-0410,TXN-003921,MEDIUM,KYC risk score is 0.231 and country risk score is 3.,Request additional information
+INV-0411,TXN-002357,LOW,KYC risk score is 0.231 and country risk score is 3.,No action required
+INV-0412,TXN-003695,LOW,KYC risk score is 0.34 and country risk score is 3.,No action required
+INV-0413,TXN-001925,MEDIUM,KYC risk score is 0.311 and country risk score is 3.,Request additional information
+INV-0414,TXN-003380,HIGH,Matched rules: R-003 customer behavior deviation Amount is 17.18x customer average. Destination country is new for customer. KYC risk score is 0.278 and country risk score is 3.,Escalate to manual review
+INV-0415,TXN-001377,MEDIUM,KYC risk score is 0.34 and country risk score is 3.,Request additional information
+INV-0416,TXN-002877,MEDIUM,KYC risk score is 0.107 and country risk score is 3.,Request additional information
+INV-0417,TXN-001976,LOW,KYC risk score is 0.28 and country risk score is 3.,No action required
+INV-0418,TXN-000106,HIGH,Matched rules: R-003 customer behavior deviation Amount is 17.63x customer average. Destination country is new for customer. KYC risk score is 0.091 and country risk score is 3.,Escalate to manual review
+INV-0419,TXN-002008,LOW,KYC risk score is 0.188 and country risk score is 3.,No action required
+INV-0420,TXN-002191,LOW,KYC risk score is 0.281 and country risk score is 2.,No action required
+INV-0421,TXN-001030,LOW,Destination country is new for customer. KYC risk score is 0.065 and country risk score is 1.,No action required
+INV-0422,TXN-003547,HIGH,Matched rules: R-002 high-risk jurisdiction; R-003 customer behavior deviation; R-005 opaque merchant category Amount is 13.88x customer average. Destination country is new for customer. KYC risk score is 0.581 and country risk score is 4.,Escalate to manual review
+INV-0423,TXN-000031,LOW,KYC risk score is 0.403 and country risk score is 1.,No action required
+INV-0424,TXN-001383,HIGH,Matched rules: R-003 customer behavior deviation; R-005 opaque merchant category Amount is 78.46x customer average. Destination country is new for customer. KYC risk score is 0.225 and country risk score is 3.,Escalate to manual review
+INV-0425,TXN-003609,LOW,KYC risk score is 0.133 and country risk score is 3.,No action required
+INV-0426,TXN-001529,LOW,KYC risk score is 0.249 and country risk score is 2.,No action required
+INV-0427,TXN-001052,LOW,KYC risk score is 0.359 and country risk score is 2.,No action required
+INV-0428,TXN-003289,MEDIUM,KYC risk score is 0.409 and country risk score is 3.,Request additional information
+INV-0429,TXN-004988,LOW,KYC risk score is 0.166 and country risk score is 1.,No action required
+INV-0430,TXN-001070,LOW,KYC risk score is 0.304 and country risk score is 3.,No action required
+INV-0431,TXN-003689,LOW,KYC risk score is 0.522 and country risk score is 1.,No action required
+INV-0432,TXN-001106,LOW,KYC risk score is 0.125 and country risk score is 1.,No action required
+INV-0433,TXN-004240,LOW,Destination country is new for customer. KYC risk score is 0.227 and country risk score is 1.,No action required
+INV-0434,TXN-003801,LOW,KYC risk score is 0.25 and country risk score is 2.,No action required
+INV-0435,TXN-000214,LOW,KYC risk score is 0.235 and country risk score is 1.,No action required
+INV-0436,TXN-001066,LOW,KYC risk score is 0.278 and country risk score is 2.,No action required
+INV-0437,TXN-001511,LOW,KYC risk score is 0.302 and country risk score is 1.,No action required
+INV-0438,TXN-004951,HIGH,Matched rules: R-002 high-risk jurisdiction Destination country is new for customer. KYC risk score is 0.319 and country risk score is 4.,Escalate to manual review
+INV-0439,TXN-002478,LOW,KYC risk score is 0.226 and country risk score is 2.,No action required
+INV-0440,TXN-000116,LOW,KYC risk score is 0.261 and country risk score is 2.,No action required
+INV-0441,TXN-000134,MEDIUM,KYC risk score is 0.186 and country risk score is 2.,Request additional information
+INV-0442,TXN-004813,LOW,KYC risk score is 0.297 and country risk score is 1.,No action required
+INV-0443,TXN-004008,MEDIUM,Destination country is new for customer. KYC risk score is 0.337 and country risk score is 1.,Request additional information
+INV-0444,TXN-002706,LOW,KYC risk score is 0.252 and country risk score is 3.,No action required
+INV-0445,TXN-000666,LOW,KYC risk score is 0.09 and country risk score is 3.,No action required
+INV-0446,TXN-001528,LOW,KYC risk score is 0.173 and country risk score is 1.,No action required
+INV-0447,TXN-004658,LOW,KYC risk score is 0.181 and country risk score is 3.,No action required
+INV-0448,TXN-001943,LOW,KYC risk score is 0.293 and country risk score is 1.,No action required
+INV-0449,TXN-004960,HIGH,Matched rules: R-001 high-value cash payment; R-003 customer behavior deviation Amount is 43.76x customer average. Destination country is new for customer. KYC risk score is 0.409 and country risk score is 3.,Escalate to manual review
+INV-0450,TXN-002167,MEDIUM,KYC risk score is 0.318 and country risk score is 2.,Request additional information
+INV-0451,TXN-000093,MEDIUM,KYC risk score is 0.31 and country risk score is 3.,Request additional information
+INV-0452,TXN-004709,LOW,KYC risk score is 0.149 and country risk score is 3.,No action required
+INV-0453,TXN-004714,LOW,KYC risk score is 0.215 and country risk score is 1.,No action required
+INV-0454,TXN-003383,LOW,KYC risk score is 0.22 and country risk score is 3.,No action required
+INV-0455,TXN-002884,LOW,KYC risk score is 0.274 and country risk score is 2.,No action required
+INV-0456,TXN-003425,LOW,KYC risk score is 0.173 and country risk score is 1.,No action required
+INV-0457,TXN-003833,LOW,KYC risk score is 0.15 and country risk score is 3.,No action required
+INV-0458,TXN-004568,HIGH,Matched rules: R-002 high-risk jurisdiction; R-003 customer behavior deviation; R-005 opaque merchant category Amount is 46.18x customer average. Destination country is new for customer. KYC risk score is 0.227 and country risk score is 4.,Escalate to manual review
+INV-0459,TXN-004656,LOW,KYC risk score is 0.546 and country risk score is 1.,No action required
+INV-0460,TXN-002936,LOW,KYC risk score is 0.142 and country risk score is 1.,No action required
+INV-0461,TXN-003112,LOW,KYC risk score is 0.065 and country risk score is 3.,No action required
+INV-0462,TXN-002250,LOW,KYC risk score is 0.071 and country risk score is 3.,No action required
+INV-0463,TXN-002908,HIGH,Matched rules: R-003 customer behavior deviation Amount is 59.18x customer average. Destination country is new for customer. KYC risk score is 0.466 and country risk score is 3.,Escalate to manual review
+INV-0464,TXN-004968,LOW,KYC risk score is 0.533 and country risk score is 3.,No action required
+INV-0465,TXN-004293,LOW,KYC risk score is 0.278 and country risk score is 1.,No action required
+INV-0466,TXN-000750,MEDIUM,Matched rules: R-002 high-risk jurisdiction Destination country is new for customer. KYC risk score is 0.1 and country risk score is 4.,Request additional information
+INV-0467,TXN-003619,LOW,KYC risk score is 0.325 and country risk score is 3.,No action required
+INV-0468,TXN-000525,LOW,KYC risk score is 0.077 and country risk score is 2.,No action required
+INV-0469,TXN-001728,MEDIUM,KYC risk score is 0.342 and country risk score is 2.,Request additional information
+INV-0470,TXN-000309,HIGH,Matched rules: R-002 high-risk jurisdiction; R-003 customer behavior deviation; R-005 opaque merchant category Amount is 39.43x customer average. Destination country is new for customer. KYC risk score is 0.192 and country risk score is 4.,Escalate to manual review
+INV-0471,TXN-001319,LOW,KYC risk score is 0.191 and country risk score is 3.,No action required
+INV-0472,TXN-004860,LOW,KYC risk score is 0.187 and country risk score is 2.,No action required
+INV-0473,TXN-001189,LOW,KYC risk score is 0.189 and country risk score is 2.,No action required
+INV-0474,TXN-004595,LOW,KYC risk score is 0.313 and country risk score is 2.,No action required
+INV-0475,TXN-002391,LOW,KYC risk score is 0.327 and country risk score is 2.,No action required
+INV-0476,TXN-001424,LOW,KYC risk score is 0.222 and country risk score is 1.,No action required
+INV-0477,TXN-001366,LOW,KYC risk score is 0.208 and country risk score is 2.,No action required
+INV-0478,TXN-000880,MEDIUM,KYC risk score is 0.337 and country risk score is 3.,Request additional information
+INV-0479,TXN-001737,LOW,KYC risk score is 0.29 and country risk score is 2.,No action required
+INV-0480,TXN-004464,LOW,KYC risk score is 0.234 and country risk score is 3.,No action required
+INV-0481,TXN-002396,LOW,KYC risk score is 0.314 and country risk score is 3.,No action required
+INV-0482,TXN-001671,HIGH,Matched rules: R-003 customer behavior deviation Amount is 50.11x customer average. Destination country is new for customer. KYC risk score is 0.214 and country risk score is 3.,Escalate to manual review
+INV-0483,TXN-001783,MEDIUM,Destination country is new for customer. KYC risk score is 0.253 and country risk score is 3.,Request additional information
+INV-0484,TXN-001047,LOW,Destination country is new for customer. KYC risk score is 0.142 and country risk score is 1.,No action required
+INV-0485,TXN-000765,LOW,KYC risk score is 0.363 and country risk score is 1.,No action required
+INV-0486,TXN-001990,HIGH,Matched rules: R-002 high-risk jurisdiction; R-003 customer behavior deviation; R-005 opaque merchant category Amount is 68.16x customer average. Destination country is new for customer. KYC risk score is 0.211 and country risk score is 4.,Escalate to manual review
+INV-0487,TXN-001887,HIGH,Matched rules: R-003 customer behavior deviation Amount is 52.2x customer average. Destination country is new for customer. KYC risk score is 0.278 and country risk score is 3.,Escalate to manual review
+INV-0488,TXN-000306,LOW,KYC risk score is 0.288 and country risk score is 1.,No action required
+INV-0489,TXN-000503,LOW,KYC risk score is 0.235 and country risk score is 3.,No action required
+INV-0490,TXN-000413,LOW,KYC risk score is 0.308 and country risk score is 2.,No action required
+INV-0491,TXN-001357,LOW,KYC risk score is 0.327 and country risk score is 2.,No action required
+INV-0492,TXN-002711,LOW,Destination country is new for customer. KYC risk score is 0.36 and country risk score is 1.,No action required
+INV-0493,TXN-000012,LOW,KYC risk score is 0.332 and country risk score is 3.,No action required
+INV-0494,TXN-001556,HIGH,Matched rules: R-003 customer behavior deviation; R-004 large crypto transfer; R-005 opaque merchant category Amount is 70.97x customer average. Destination country is new for customer. KYC risk score is 0.226 and country risk score is 3.,Escalate to manual review
+INV-0495,TXN-000237,LOW,KYC risk score is 0.138 and country risk score is 1.,No action required
+INV-0496,TXN-001058,HIGH,Matched rules: R-002 high-risk jurisdiction; R-003 customer behavior deviation; R-004 large crypto transfer; R-005 opaque merchant category Amount is 69.78x customer average. Destination country is new for customer. KYC risk score is 0.249 and country risk score is 4.,Escalate to manual review
+INV-0497,TXN-004885,LOW,KYC risk score is 0.103 and country risk score is 2.,No action required
+INV-0498,TXN-001629,LOW,KYC risk score is 0.312 and country risk score is 2.,No action required
+INV-0499,TXN-000015,LOW,KYC risk score is 0.129 and country risk score is 3.,No action required
+INV-0500,TXN-004763,LOW,KYC risk score is 0.159 and country risk score is 2.,No action required
+INV-0501,TXN-002771,LOW,KYC risk score is 0.173 and country risk score is 1.,No action required
+INV-0502,TXN-004127,LOW,KYC risk score is 0.142 and country risk score is 2.,No action required
+INV-0503,TXN-004018,LOW,KYC risk score is 0.297 and country risk score is 1.,No action required
+INV-0504,TXN-001497,LOW,KYC risk score is 0.304 and country risk score is 2.,No action required
+INV-0505,TXN-000217,LOW,KYC risk score is 0.403 and country risk score is 3.,No action required
+INV-0506,TXN-000196,MEDIUM,Destination country is new for customer. KYC risk score is 0.335 and country risk score is 1.,Request additional information
+INV-0507,TXN-003712,LOW,KYC risk score is 0.263 and country risk score is 1.,No action required
+INV-0508,TXN-001255,LOW,KYC risk score is 0.408 and country risk score is 1.,No action required
+INV-0509,TXN-000412,LOW,KYC risk score is 0.069 and country risk score is 1.,No action required
+INV-0510,TXN-000163,LOW,KYC risk score is 0.273 and country risk score is 3.,No action required
+INV-0511,TXN-001411,HIGH,Matched rules: R-002 high-risk jurisdiction; R-003 customer behavior deviation Amount is 15.41x customer average. Destination country is new for customer. KYC risk score is 0.182 and country risk score is 4.,Escalate to manual review
+INV-0512,TXN-002668,MEDIUM,KYC risk score is 0.507 and country risk score is 3.,Request additional information
+INV-0513,TXN-002927,LOW,KYC risk score is 0.135 and country risk score is 1.,No action required
+INV-0514,TXN-003219,LOW,KYC risk score is 0.546 and country risk score is 1.,No action required
+INV-0515,TXN-004867,LOW,KYC risk score is 0.29 and country risk score is 2.,No action required
+INV-0516,TXN-001736,LOW,KYC risk score is 0.254 and country risk score is 1.,No action required
+INV-0517,TXN-004190,MEDIUM,KYC risk score is 0.214 and country risk score is 2.,Request additional information
+INV-0518,TXN-003542,LOW,KYC risk score is 0.168 and country risk score is 3.,No action required
+INV-0519,TXN-000058,LOW,KYC risk score is 0.235 and country risk score is 2.,No action required
+INV-0520,TXN-003565,LOW,KYC risk score is 0.18 and country risk score is 3.,No action required
+INV-0521,TXN-001328,LOW,KYC risk score is 0.079 and country risk score is 2.,No action required
+INV-0522,TXN-001826,LOW,KYC risk score is 0.153 and country risk score is 1.,No action required
+INV-0523,TXN-000960,HIGH,Matched rules: R-002 high-risk jurisdiction Destination country is new for customer. KYC risk score is 0.077 and country risk score is 4.,Escalate to manual review
+INV-0524,TXN-002177,LOW,Destination country is new for customer. KYC risk score is 0.31 and country risk score is 2.,No action required
+INV-0525,TXN-001981,LOW,KYC risk score is 0.228 and country risk score is 1.,No action required
+INV-0526,TXN-004316,LOW,KYC risk score is 0.245 and country risk score is 3.,No action required
+INV-0527,TXN-003932,LOW,KYC risk score is 0.315 and country risk score is 2.,No action required
+INV-0528,TXN-002306,LOW,KYC risk score is 0.22 and country risk score is 3.,No action required
+INV-0529,TXN-001893,LOW,KYC risk score is 0.11 and country risk score is 2.,No action required
+INV-0530,TXN-004043,LOW,KYC risk score is 0.405 and country risk score is 1.,No action required
+INV-0531,TXN-002012,LOW,KYC risk score is 0.228 and country risk score is 3.,No action required
+INV-0532,TXN-002872,LOW,KYC risk score is 0.152 and country risk score is 1.,No action required
+INV-0533,TXN-001868,MEDIUM,Matched rules: R-002 high-risk jurisdiction Destination country is new for customer. KYC risk score is 0.196 and country risk score is 5.,Request additional information
+INV-0534,TXN-002885,LOW,KYC risk score is 0.349 and country risk score is 1.,No action required
+INV-0535,TXN-003439,LOW,KYC risk score is 0.263 and country risk score is 1.,No action required
+INV-0536,TXN-001083,MEDIUM,Destination country is new for customer. KYC risk score is 0.215 and country risk score is 2.,Request additional information
+INV-0537,TXN-003389,LOW,KYC risk score is 0.25 and country risk score is 1.,No action required
+INV-0538,TXN-000118,LOW,KYC risk score is 0.11 and country risk score is 1.,No action required
+INV-0539,TXN-000287,LOW,KYC risk score is 0.447 and country risk score is 1.,No action required
+INV-0540,TXN-004807,HIGH,Matched rules: R-002 high-risk jurisdiction; R-003 customer behavior deviation Amount is 30.72x customer average. Destination country is new for customer. KYC risk score is 0.342 and country risk score is 4.,Escalate to manual review
+INV-0541,TXN-004016,LOW,KYC risk score is 0.091 and country risk score is 2.,No action required
+INV-0542,TXN-003129,MEDIUM,KYC risk score is 0.338 and country risk score is 3.,Request additional information
+INV-0543,TXN-001879,LOW,KYC risk score is 0.196 and country risk score is 1.,No action required
+INV-0544,TXN-002665,LOW,KYC risk score is 0.097 and country risk score is 2.,No action required
+INV-0545,TXN-001124,LOW,KYC risk score is 0.297 and country risk score is 1.,No action required
+INV-0546,TXN-003752,LOW,KYC risk score is 0.116 and country risk score is 1.,No action required
+INV-0547,TXN-002001,LOW,KYC risk score is 0.304 and country risk score is 3.,No action required
+INV-0548,TXN-004975,HIGH,Matched rules: R-002 high-risk jurisdiction; R-003 customer behavior deviation Amount is 82.4x customer average. Destination country is new for customer. KYC risk score is 0.213 and country risk score is 4.,Escalate to manual review
+INV-0549,TXN-003604,HIGH,Matched rules: R-003 customer behavior deviation Amount is 21.73x customer average. Destination country is new for customer. KYC risk score is 0.333 and country risk score is 3.,Escalate to manual review
+INV-0550,TXN-003161,LOW,KYC risk score is 0.135 and country risk score is 3.,No action required
+INV-0551,TXN-002120,LOW,KYC risk score is 0.213 and country risk score is 3.,No action required
+INV-0552,TXN-004501,LOW,KYC risk score is 0.459 and country risk score is 1.,No action required
+INV-0553,TXN-004492,LOW,KYC risk score is 0.28 and country risk score is 1.,No action required
+INV-0554,TXN-000727,LOW,Destination country is new for customer. KYC risk score is 0.155 and country risk score is 1.,No action required
+INV-0555,TXN-001897,LOW,KYC risk score is 0.072 and country risk score is 2.,No action required
+INV-0556,TXN-004737,MEDIUM,KYC risk score is 0.48 and country risk score is 2.,Request additional information
+INV-0557,TXN-002247,LOW,KYC risk score is 0.063 and country risk score is 2.,No action required
+INV-0558,TXN-001199,MEDIUM,KYC risk score is 0.433 and country risk score is 3.,Request additional information
+INV-0559,TXN-000065,HIGH,Matched rules: R-003 customer behavior deviation Amount is 23.19x customer average. Destination country is new for customer. KYC risk score is 0.522 and country risk score is 3.,Escalate to manual review
+INV-0560,TXN-004088,HIGH,Matched rules: R-002 high-risk jurisdiction; R-003 customer behavior deviation; R-005 opaque merchant category Amount is 83.45x customer average. Destination country is new for customer. KYC risk score is 0.202 and country risk score is 4.,Escalate to manual review
+INV-0561,TXN-002970,LOW,Destination country is new for customer. KYC risk score is 0.138 and country risk score is 1.,No action required
+INV-0562,TXN-002541,LOW,KYC risk score is 0.304 and country risk score is 1.,No action required
+INV-0563,TXN-000513,LOW,KYC risk score is 0.149 and country risk score is 2.,No action required
+INV-0564,TXN-002534,LOW,KYC risk score is 0.154 and country risk score is 1.,No action required
+INV-0565,TXN-002034,LOW,KYC risk score is 0.101 and country risk score is 1.,No action required
+INV-0566,TXN-000573,LOW,KYC risk score is 0.084 and country risk score is 3.,No action required
+INV-0567,TXN-000238,LOW,Destination country is new for customer. KYC risk score is 0.263 and country risk score is 1.,No action required
+INV-0568,TXN-000833,LOW,KYC risk score is 0.147 and country risk score is 1.,No action required
+INV-0569,TXN-001922,LOW,KYC risk score is 0.279 and country risk score is 1.,No action required
+INV-0570,TXN-004828,LOW,KYC risk score is 0.129 and country risk score is 3.,No action required
+INV-0571,TXN-004327,LOW,KYC risk score is 0.079 and country risk score is 2.,No action required
+INV-0572,TXN-003864,HIGH,Matched rules: R-003 customer behavior deviation; R-004 large crypto transfer; R-005 opaque merchant category Amount is 78.27x customer average. KYC risk score is 0.257 and country risk score is 3.,Escalate to manual review
+INV-0573,TXN-002529,LOW,KYC risk score is 0.135 and country risk score is 1.,No action required
+INV-0574,TXN-001326,LOW,Destination country is new for customer. KYC risk score is 0.504 and country risk score is 1.,No action required
+INV-0575,TXN-003015,MEDIUM,KYC risk score is 0.567 and country risk score is 1.,Request additional information
+INV-0576,TXN-001974,MEDIUM,Matched rules: R-002 high-risk jurisdiction Destination country is new for customer. KYC risk score is 0.433 and country risk score is 5.,Request additional information
+INV-0577,TXN-001656,LOW,KYC risk score is 0.376 and country risk score is 1.,No action required
+INV-0578,TXN-003785,LOW,KYC risk score is 0.263 and country risk score is 1.,No action required
+INV-0579,TXN-000847,MEDIUM,KYC risk score is 0.546 and country risk score is 3.,Request additional information
+INV-0580,TXN-004215,LOW,KYC risk score is 0.188 and country risk score is 3.,No action required
+INV-0581,TXN-004802,HIGH,Matched rules: R-003 customer behavior deviation Amount is 12.97x customer average. Destination country is new for customer. KYC risk score is 0.14 and country risk score is 3.,Escalate to manual review
+INV-0582,TXN-001536,LOW,KYC risk score is 0.152 and country risk score is 3.,No action required
+INV-0583,TXN-004389,LOW,KYC risk score is 0.273 and country risk score is 1.,No action required
+INV-0584,TXN-002310,LOW,KYC risk score is 0.25 and country risk score is 3.,No action required
+INV-0585,TXN-004398,LOW,KYC risk score is 0.583 and country risk score is 2.,No action required
+INV-0586,TXN-004367,HIGH,Matched rules: R-003 customer behavior deviation; R-005 opaque merchant category Amount is 76.89x customer average. Destination country is new for customer. KYC risk score is 0.151 and country risk score is 3.,Escalate to manual review
+INV-0587,TXN-004149,LOW,KYC risk score is 0.285 and country risk score is 3.,No action required
+INV-0588,TXN-003006,LOW,KYC risk score is 0.31 and country risk score is 2.,No action required
+INV-0589,TXN-003372,HIGH,Destination country is new for customer. KYC risk score is 0.149 and country risk score is 2.,Escalate to manual review
+INV-0590,TXN-001817,HIGH,Matched rules: R-003 customer behavior deviation Amount is 11.1x customer average. KYC risk score is 0.111 and country risk score is 3.,Escalate to manual review
+INV-0591,TXN-004111,HIGH,Matched rules: R-003 customer behavior deviation Amount is 70.36x customer average. Destination country is new for customer. KYC risk score is 0.094 and country risk score is 3.,Escalate to manual review
+INV-0592,TXN-000067,LOW,KYC risk score is 0.163 and country risk score is 1.,No action required
+INV-0593,TXN-001500,MEDIUM,KYC risk score is 0.421 and country risk score is 3.,Request additional information
+INV-0594,TXN-004466,LOW,KYC risk score is 0.376 and country risk score is 1.,No action required
+INV-0595,TXN-002750,LOW,KYC risk score is 0.186 and country risk score is 1.,No action required
+INV-0596,TXN-001218,MEDIUM,KYC risk score is 0.538 and country risk score is 3.,Request additional information
+INV-0597,TXN-000566,LOW,KYC risk score is 0.178 and country risk score is 1.,No action required
+INV-0598,TXN-001245,LOW,KYC risk score is 0.097 and country risk score is 1.,No action required
+INV-0599,TXN-000419,LOW,KYC risk score is 0.263 and country risk score is 1.,No action required
+INV-0600,TXN-000401,MEDIUM,KYC risk score is 0.178 and country risk score is 3.,Request additional information
+INV-0601,TXN-002350,LOW,KYC risk score is 0.263 and country risk score is 2.,No action required
+INV-0602,TXN-000743,LOW,KYC risk score is 0.152 and country risk score is 2.,No action required
+INV-0603,TXN-003311,LOW,KYC risk score is 0.311 and country risk score is 2.,No action required
+INV-0604,TXN-002187,LOW,KYC risk score is 0.288 and country risk score is 1.,No action required
+INV-0605,TXN-004541,MEDIUM,Matched rules: R-002 high-risk jurisdiction Destination country is new for customer. KYC risk score is 0.106 and country risk score is 4.,Request additional information
+INV-0606,TXN-002947,HIGH,Matched rules: R-003 customer behavior deviation; R-005 opaque merchant category Amount is 62.73x customer average. KYC risk score is 0.215 and country risk score is 3.,Escalate to manual review
+INV-0607,TXN-000762,MEDIUM,KYC risk score is 0.494 and country risk score is 3.,Request additional information
+INV-0608,TXN-003014,LOW,KYC risk score is 0.466 and country risk score is 1.,No action required
+INV-0609,TXN-004649,LOW,KYC risk score is 0.228 and country risk score is 2.,No action required
+INV-0610,TXN-003321,LOW,KYC risk score is 0.114 and country risk score is 1.,No action required
+INV-0611,TXN-002144,HIGH,KYC risk score is 0.139 and country risk score is 3.,Escalate to manual review
+INV-0612,TXN-004427,HIGH,Matched rules: R-003 customer behavior deviation Amount is 83.32x customer average. Destination country is new for customer. KYC risk score is 0.169 and country risk score is 3.,Escalate to manual review
+INV-0613,TXN-003908,MEDIUM,KYC risk score is 0.449 and country risk score is 3.,Request additional information
+INV-0614,TXN-000259,LOW,KYC risk score is 0.127 and country risk score is 3.,No action required
+INV-0615,TXN-001543,LOW,KYC risk score is 0.215 and country risk score is 3.,No action required
+INV-0616,TXN-001110,LOW,KYC risk score is 0.29 and country risk score is 1.,No action required
+INV-0617,TXN-004242,LOW,KYC risk score is 0.349 and country risk score is 3.,No action required
+INV-0618,TXN-003795,MEDIUM,KYC risk score is 0.559 and country risk score is 3.,Request additional information
+INV-0619,TXN-000123,LOW,KYC risk score is 0.191 and country risk score is 3.,No action required
+INV-0620,TXN-001958,MEDIUM,KYC risk score is 0.409 and country risk score is 3.,Request additional information
+INV-0621,TXN-000335,LOW,KYC risk score is 0.288 and country risk score is 1.,No action required
+INV-0622,TXN-004490,LOW,KYC risk score is 0.215 and country risk score is 1.,No action required
+INV-0623,TXN-004512,LOW,KYC risk score is 0.226 and country risk score is 2.,No action required
+INV-0624,TXN-004486,LOW,KYC risk score is 0.179 and country risk score is 2.,No action required
+INV-0625,TXN-004234,LOW,KYC risk score is 0.532 and country risk score is 1.,No action required
+INV-0626,TXN-002290,LOW,KYC risk score is 0.149 and country risk score is 3.,No action required
+INV-0627,TXN-001349,LOW,KYC risk score is 0.089 and country risk score is 1.,No action required
+INV-0628,TXN-002972,LOW,Destination country is new for customer. KYC risk score is 0.276 and country risk score is 1.,No action required
+INV-0629,TXN-002172,LOW,KYC risk score is 0.559 and country risk score is 2.,No action required
+INV-0630,TXN-000072,HIGH,Matched rules: R-002 high-risk jurisdiction; R-003 customer behavior deviation Amount is 13.47x customer average. Destination country is new for customer. KYC risk score is 0.317 and country risk score is 4.,Escalate to manual review
+INV-0631,TXN-001108,MEDIUM,Destination country is new for customer. KYC risk score is 0.411 and country risk score is 3.,Request additional information
+INV-0632,TXN-000567,LOW,KYC risk score is 0.304 and country risk score is 3.,No action required
+INV-0633,TXN-003374,LOW,KYC risk score is 0.154 and country risk score is 2.,No action required
+INV-0634,TXN-004713,MEDIUM,KYC risk score is 0.495 and country risk score is 2.,Request additional information
+INV-0635,TXN-004430,LOW,KYC risk score is 0.187 and country risk score is 2.,No action required
+INV-0636,TXN-000371,HIGH,Matched rules: R-002 high-risk jurisdiction; R-003 customer behavior deviation Amount is 13.21x customer average. Destination country is new for customer. KYC risk score is 0.178 and country risk score is 4.,Escalate to manual review
+INV-0637,TXN-003487,LOW,KYC risk score is 0.338 and country risk score is 1.,No action required
+INV-0638,TXN-004521,LOW,KYC risk score is 0.129 and country risk score is 3.,No action required
+INV-0639,TXN-000569,LOW,KYC risk score is 0.322 and country risk score is 3.,No action required
+INV-0640,TXN-001864,LOW,KYC risk score is 0.296 and country risk score is 2.,No action required
+INV-0641,TXN-002806,LOW,KYC risk score is 0.271 and country risk score is 2.,No action required
+INV-0642,TXN-003192,MEDIUM,KYC risk score is 0.319 and country risk score is 3.,Request additional information
+INV-0643,TXN-001672,LOW,KYC risk score is 0.363 and country risk score is 1.,No action required
+INV-0644,TXN-003147,MEDIUM,Destination country is new for customer. KYC risk score is 0.338 and country risk score is 2.,Request additional information
+INV-0645,TXN-001171,LOW,KYC risk score is 0.533 and country risk score is 2.,No action required
+INV-0646,TXN-002215,LOW,KYC risk score is 0.442 and country risk score is 3.,No action required
+INV-0647,TXN-002353,LOW,KYC risk score is 0.21 and country risk score is 2.,No action required
+INV-0648,TXN-003545,LOW,KYC risk score is 0.141 and country risk score is 2.,No action required
+INV-0649,TXN-001505,HIGH,Matched rules: R-003 customer behavior deviation Amount is 38.39x customer average. Destination country is new for customer. KYC risk score is 0.234 and country risk score is 3.,Escalate to manual review
+INV-0650,TXN-003513,LOW,KYC risk score is 0.2 and country risk score is 1.,No action required
+INV-0651,TXN-002733,HIGH,Destination country is new for customer. KYC risk score is 0.445 and country risk score is 2.,Escalate to manual review
+INV-0652,TXN-002981,MEDIUM,KYC risk score is 0.337 and country risk score is 3.,Request additional information
+INV-0653,TXN-000997,HIGH,Matched rules: R-003 customer behavior deviation; R-004 large crypto transfer Amount is 83.27x customer average. Destination country is new for customer. KYC risk score is 0.252 and country risk score is 3.,Escalate to manual review
+INV-0654,TXN-002990,LOW,KYC risk score is 0.34 and country risk score is 2.,No action required
+INV-0655,TXN-004023,LOW,KYC risk score is 0.583 and country risk score is 1.,No action required
+INV-0656,TXN-003692,LOW,KYC risk score is 0.183 and country risk score is 3.,No action required
+INV-0657,TXN-001877,LOW,KYC risk score is 0.451 and country risk score is 1.,No action required
+INV-0658,TXN-002769,HIGH,Matched rules: R-003 customer behavior deviation; R-005 opaque merchant category Amount is 35.58x customer average. Destination country is new for customer. KYC risk score is 0.25 and country risk score is 3.,Escalate to manual review
+INV-0659,TXN-000689,HIGH,Matched rules: R-003 customer behavior deviation Amount is 16.3x customer average. Destination country is new for customer. KYC risk score is 0.16 and country risk score is 3.,Escalate to manual review
+INV-0660,TXN-003931,LOW,KYC risk score is 0.325 and country risk score is 1.,No action required
+INV-0661,TXN-003780,LOW,KYC risk score is 0.068 and country risk score is 3.,No action required
+INV-0662,TXN-002299,LOW,KYC risk score is 0.228 and country risk score is 1.,No action required
+INV-0663,TXN-004502,LOW,KYC risk score is 0.363 and country risk score is 1.,No action required
+INV-0664,TXN-002430,MEDIUM,Destination country is new for customer. KYC risk score is 0.28 and country risk score is 3.,Request additional information
+INV-0665,TXN-003731,LOW,KYC risk score is 0.089 and country risk score is 1.,No action required
+INV-0666,TXN-004876,LOW,KYC risk score is 0.332 and country risk score is 1.,No action required
+INV-0667,TXN-003828,LOW,KYC risk score is 0.342 and country risk score is 3.,No action required
+INV-0668,TXN-000352,LOW,KYC risk score is 0.228 and country risk score is 1.,No action required
+INV-0669,TXN-002895,LOW,KYC risk score is 0.129 and country risk score is 3.,No action required
+INV-0670,TXN-004744,LOW,KYC risk score is 0.149 and country risk score is 2.,No action required
+INV-0671,TXN-004906,LOW,KYC risk score is 0.252 and country risk score is 3.,No action required
+INV-0672,TXN-002175,LOW,Destination country is new for customer. KYC risk score is 0.337 and country risk score is 2.,No action required
+INV-0673,TXN-002280,HIGH,Matched rules: R-003 customer behavior deviation Amount is 18.69x customer average. Destination country is new for customer. KYC risk score is 0.333 and country risk score is 3.,Escalate to manual review
+INV-0674,TXN-003096,HIGH,Matched rules: R-003 customer behavior deviation Amount is 27.21x customer average. Destination country is new for customer. KYC risk score is 0.079 and country risk score is 3.,Escalate to manual review
+INV-0675,TXN-000808,LOW,KYC risk score is 0.13 and country risk score is 2.,No action required
+INV-0676,TXN-003685,MEDIUM,KYC risk score is 0.18 and country risk score is 3.,Request additional information
+INV-0677,TXN-001833,HIGH,Matched rules: R-003 customer behavior deviation Amount is 30.07x customer average. Destination country is new for customer. KYC risk score is 0.325 and country risk score is 3.,Escalate to manual review
+INV-0678,TXN-002584,LOW,KYC risk score is 0.312 and country risk score is 3.,No action required
+INV-0679,TXN-001856,LOW,KYC risk score is 0.307 and country risk score is 1.,No action required
+INV-0680,TXN-000460,LOW,Destination country is new for customer. KYC risk score is 0.248 and country risk score is 2.,No action required
+INV-0681,TXN-004100,LOW,KYC risk score is 0.349 and country risk score is 1.,No action required
+INV-0682,TXN-002351,LOW,KYC risk score is 0.238 and country risk score is 3.,No action required
+INV-0683,TXN-002382,HIGH,Matched rules: R-002 high-risk jurisdiction; R-003 customer behavior deviation Amount is 47.53x customer average. Destination country is new for customer. KYC risk score is 0.19 and country risk score is 4.,Escalate to manual review
+INV-0684,TXN-004084,MEDIUM,KYC risk score is 0.319 and country risk score is 3.,Request additional information
+INV-0685,TXN-000023,LOW,KYC risk score is 0.31 and country risk score is 1.,No action required
+INV-0686,TXN-003459,MEDIUM,KYC risk score is 0.285 and country risk score is 3.,Request additional information
+INV-0687,TXN-004009,LOW,KYC risk score is 0.232 and country risk score is 3.,No action required
+INV-0688,TXN-002518,LOW,KYC risk score is 0.308 and country risk score is 1.,No action required
+INV-0689,TXN-000039,MEDIUM,KYC risk score is 0.138 and country risk score is 3.,Request additional information
+INV-0690,TXN-004987,MEDIUM,KYC risk score is 0.319 and country risk score is 3.,Request additional information
+INV-0691,TXN-000520,HIGH,Matched rules: R-002 high-risk jurisdiction; R-003 customer behavior deviation Amount is 35.63x customer average. Destination country is new for customer. KYC risk score is 0.257 and country risk score is 4.,Escalate to manual review
+INV-0692,TXN-001286,MEDIUM,Destination country is new for customer. KYC risk score is 0.13 and country risk score is 3.,Request additional information
+INV-0693,TXN-003159,LOW,KYC risk score is 0.281 and country risk score is 1.,No action required
+INV-0694,TXN-000245,LOW,KYC risk score is 0.273 and country risk score is 3.,No action required
+INV-0695,TXN-001258,HIGH,Matched rules: R-001 high-value cash payment; R-003 customer behavior deviation; R-005 opaque merchant category Amount is 23.17x customer average. KYC risk score is 0.248 and country risk score is 3.,Escalate to manual review
+INV-0696,TXN-004156,HIGH,Matched rules: R-001 high-value cash payment; R-003 customer behavior deviation; R-005 opaque merchant category Amount is 27.19x customer average. Destination country is new for customer. KYC risk score is 0.504 and country risk score is 3.,Escalate to manual review
+INV-0697,TXN-003730,HIGH,Matched rules: R-003 customer behavior deviation Amount is 75.09x customer average. Destination country is new for customer. KYC risk score is 0.195 and country risk score is 3.,Escalate to manual review
+INV-0698,TXN-000448,LOW,KYC risk score is 0.11 and country risk score is 1.,No action required
+INV-0699,TXN-000192,HIGH,Destination country is new for customer. KYC risk score is 0.209 and country risk score is 3.,Escalate to manual review
+INV-0700,TXN-003666,MEDIUM,Destination country is new for customer. KYC risk score is 0.249 and country risk score is 3.,Request additional information
+INV-0701,TXN-000533,LOW,KYC risk score is 0.225 and country risk score is 3.,No action required
+INV-0702,TXN-000882,LOW,KYC risk score is 0.349 and country risk score is 3.,No action required
+INV-0703,TXN-000212,LOW,KYC risk score is 0.522 and country risk score is 1.,No action required
+INV-0704,TXN-003514,LOW,KYC risk score is 0.064 and country risk score is 2.,No action required
+INV-0705,TXN-002428,LOW,KYC risk score is 0.192 and country risk score is 1.,No action required
+INV-0706,TXN-004168,LOW,KYC risk score is 0.335 and country risk score is 2.,No action required
+INV-0707,TXN-000435,LOW,KYC risk score is 0.349 and country risk score is 2.,No action required
+INV-0708,TXN-001187,LOW,KYC risk score is 0.273 and country risk score is 3.,No action required
+INV-0709,TXN-001593,HIGH,Matched rules: R-003 customer behavior deviation Amount is 28.76x customer average. Destination country is new for customer. KYC risk score is 0.308 and country risk score is 3.,Escalate to manual review
+INV-0710,TXN-001188,LOW,KYC risk score is 0.222 and country risk score is 2.,No action required
+INV-0711,TXN-002924,LOW,KYC risk score is 0.307 and country risk score is 1.,No action required
+INV-0712,TXN-004165,LOW,KYC risk score is 0.425 and country risk score is 2.,No action required
+INV-0713,TXN-003252,LOW,KYC risk score is 0.198 and country risk score is 1.,No action required
+INV-0714,TXN-004614,LOW,KYC risk score is 0.163 and country risk score is 1.,No action required
+INV-0715,TXN-004178,LOW,KYC risk score is 0.336 and country risk score is 1.,No action required
+INV-0716,TXN-000132,HIGH,Matched rules: R-003 customer behavior deviation Amount is 41.45x customer average. Destination country is new for customer. KYC risk score is 0.185 and country risk score is 3.,Escalate to manual review
+INV-0717,TXN-000508,MEDIUM,KYC risk score is 0.199 and country risk score is 2.,Request additional information
+INV-0718,TXN-004444,MEDIUM,Destination country is new for customer. KYC risk score is 0.321 and country risk score is 2.,Request additional information
+INV-0719,TXN-004387,MEDIUM,Destination country is new for customer. KYC risk score is 0.314 and country risk score is 3.,Request additional information
+INV-0720,TXN-000809,LOW,KYC risk score is 0.139 and country risk score is 3.,No action required
+INV-0721,TXN-002332,LOW,KYC risk score is 0.214 and country risk score is 2.,No action required
+INV-0722,TXN-004302,LOW,KYC risk score is 0.255 and country risk score is 1.,No action required
+INV-0723,TXN-002464,LOW,KYC risk score is 0.153 and country risk score is 1.,No action required
+INV-0724,TXN-004433,LOW,KYC risk score is 0.129 and country risk score is 3.,No action required
+INV-0725,TXN-004949,MEDIUM,KYC risk score is 0.55 and country risk score is 1.,Request additional information
+INV-0726,TXN-002547,LOW,KYC risk score is 0.101 and country risk score is 3.,No action required
+INV-0727,TXN-003174,LOW,KYC risk score is 0.107 and country risk score is 1.,No action required
+INV-0728,TXN-002695,MEDIUM,KYC risk score is 0.337 and country risk score is 3.,Request additional information
+INV-0729,TXN-002148,LOW,KYC risk score is 0.332 and country risk score is 1.,No action required
+INV-0730,TXN-000604,LOW,KYC risk score is 0.406 and country risk score is 1.,No action required
+INV-0731,TXN-000558,HIGH,Matched rules: R-002 high-risk jurisdiction Destination country is new for customer. KYC risk score is 0.25 and country risk score is 5.,Escalate to manual review
+INV-0732,TXN-001477,HIGH,Matched rules: R-002 high-risk jurisdiction; R-003 customer behavior deviation; R-005 opaque merchant category Amount is 74.85x customer average. Destination country is new for customer. KYC risk score is 0.227 and country risk score is 4.,Escalate to manual review
+INV-0733,TXN-002272,LOW,KYC risk score is 0.327 and country risk score is 2.,No action required
+INV-0734,TXN-001430,HIGH,KYC risk score is 0.495 and country risk score is 3.,Escalate to manual review
+INV-0735,TXN-004904,LOW,KYC risk score is 0.233 and country risk score is 3.,No action required
+INV-0736,TXN-003369,LOW,KYC risk score is 0.054 and country risk score is 3.,No action required
+INV-0737,TXN-000485,LOW,KYC risk score is 0.162 and country risk score is 1.,No action required
+INV-0738,TXN-003478,LOW,KYC risk score is 0.138 and country risk score is 1.,No action required
+INV-0739,TXN-000675,MEDIUM,Destination country is new for customer. KYC risk score is 0.107 and country risk score is 2.,Request additional information
+INV-0740,TXN-002046,LOW,KYC risk score is 0.18 and country risk score is 3.,No action required
+INV-0741,TXN-004557,LOW,KYC risk score is 0.129 and country risk score is 3.,No action required
+INV-0742,TXN-001485,HIGH,Matched rules: R-002 high-risk jurisdiction; R-003 customer behavior deviation Amount is 83.81x customer average. Destination country is new for customer. KYC risk score is 0.189 and country risk score is 4.,Escalate to manual review
+INV-0743,TXN-000982,LOW,KYC risk score is 0.129 and country risk score is 3.,No action required
+INV-0744,TXN-003884,LOW,KYC risk score is 0.167 and country risk score is 1.,No action required
+INV-0745,TXN-001299,MEDIUM,Matched rules: R-002 high-risk jurisdiction Destination country is new for customer. KYC risk score is 0.099 and country risk score is 5.,Request additional information
+INV-0746,TXN-001182,LOW,KYC risk score is 0.151 and country risk score is 1.,No action required
+INV-0747,TXN-000635,LOW,KYC risk score is 0.325 and country risk score is 1.,No action required
+INV-0748,TXN-003528,LOW,KYC risk score is 0.193 and country risk score is 3.,No action required
+INV-0749,TXN-003633,HIGH,Matched rules: R-003 customer behavior deviation; R-004 large crypto transfer Amount is 30.34x customer average. Destination country is new for customer. KYC risk score is 0.444 and country risk score is 3.,Escalate to manual review
+INV-0750,TXN-004237,LOW,KYC risk score is 0.2 and country risk score is 1.,No action required
+INV-0751,TXN-001176,LOW,KYC risk score is 0.274 and country risk score is 2.,No action required
+INV-0752,TXN-004756,HIGH,Matched rules: R-002 high-risk jurisdiction; R-003 customer behavior deviation Amount is 73.51x customer average. Destination country is new for customer. KYC risk score is 0.155 and country risk score is 4.,Escalate to manual review
+INV-0753,TXN-003331,MEDIUM,Destination country is new for customer. KYC risk score is 0.263 and country risk score is 2.,Request additional information
+INV-0754,TXN-003957,LOW,KYC risk score is 0.201 and country risk score is 1.,No action required
+INV-0755,TXN-002647,LOW,KYC risk score is 0.201 and country risk score is 3.,No action required
+INV-0756,TXN-003523,LOW,KYC risk score is 0.224 and country risk score is 2.,No action required
+INV-0757,TXN-003721,MEDIUM,KYC risk score is 0.425 and country risk score is 3.,Request additional information
+INV-0758,TXN-003375,LOW,KYC risk score is 0.538 and country risk score is 1.,No action required
+INV-0759,TXN-003039,LOW,KYC risk score is 0.129 and country risk score is 3.,No action required
+INV-0760,TXN-004791,LOW,KYC risk score is 0.135 and country risk score is 1.,No action required
+INV-0761,TXN-004560,LOW,KYC risk score is 0.11 and country risk score is 1.,No action required
+INV-0762,TXN-003255,LOW,KYC risk score is 0.215 and country risk score is 3.,No action required
+INV-0763,TXN-001837,LOW,KYC risk score is 0.401 and country risk score is 3.,No action required
+INV-0764,TXN-003686,HIGH,Matched rules: R-002 high-risk jurisdiction; R-003 customer behavior deviation Amount is 48.83x customer average. Destination country is new for customer. KYC risk score is 0.221 and country risk score is 5.,Escalate to manual review
+INV-0765,TXN-004564,LOW,KYC risk score is 0.238 and country risk score is 2.,No action required
+INV-0766,TXN-003870,LOW,KYC risk score is 0.184 and country risk score is 3.,No action required
+INV-0767,TXN-004337,LOW,KYC risk score is 0.202 and country risk score is 3.,No action required
+INV-0768,TXN-002864,LOW,KYC risk score is 0.195 and country risk score is 3.,No action required
+INV-0769,TXN-002737,LOW,KYC risk score is 0.258 and country risk score is 1.,No action required
+INV-0770,TXN-004832,MEDIUM,KYC risk score is 0.315 and country risk score is 3.,Request additional information
+INV-0771,TXN-003643,LOW,KYC risk score is 0.325 and country risk score is 1.,No action required
+INV-0772,TXN-000901,MEDIUM,Destination country is new for customer. KYC risk score is 0.077 and country risk score is 3.,Request additional information
+INV-0773,TXN-000660,LOW,KYC risk score is 0.332 and country risk score is 3.,No action required
+INV-0774,TXN-004274,LOW,KYC risk score is 0.282 and country risk score is 2.,No action required
+INV-0775,TXN-003944,LOW,KYC risk score is 0.061 and country risk score is 1.,No action required
+INV-0776,TXN-001073,HIGH,Matched rules: R-002 high-risk jurisdiction; R-003 customer behavior deviation; R-005 opaque merchant category Amount is 83.05x customer average. Destination country is new for customer. KYC risk score is 0.187 and country risk score is 5.,Escalate to manual review
+INV-0777,TXN-002313,LOW,KYC risk score is 0.138 and country risk score is 3.,No action required
+INV-0778,TXN-000932,HIGH,Matched rules: R-002 high-risk jurisdiction; R-003 customer behavior deviation Amount is 52.05x customer average. Destination country is new for customer. KYC risk score is 0.393 and country risk score is 5.,Escalate to manual review
+INV-0779,TXN-004344,HIGH,Matched rules: R-002 high-risk jurisdiction Destination country is new for customer. KYC risk score is 0.199 and country risk score is 4.,Escalate to manual review
+INV-0780,TXN-000149,LOW,KYC risk score is 0.129 and country risk score is 1.,No action required
+INV-0781,TXN-003551,MEDIUM,KYC risk score is 0.442 and country risk score is 3.,Request additional information
+INV-0782,TXN-001784,LOW,KYC risk score is 0.482 and country risk score is 3.,No action required
+INV-0783,TXN-003919,HIGH,Matched rules: R-003 customer behavior deviation Amount is 38.16x customer average. Destination country is new for customer. KYC risk score is 0.153 and country risk score is 3.,Escalate to manual review
+INV-0784,TXN-004402,LOW,KYC risk score is 0.216 and country risk score is 2.,No action required
+INV-0785,TXN-003644,LOW,KYC risk score is 0.142 and country risk score is 1.,No action required
+INV-0786,TXN-001252,LOW,KYC risk score is 0.332 and country risk score is 2.,No action required
+INV-0787,TXN-003628,HIGH,Matched rules: R-002 high-risk jurisdiction; R-003 customer behavior deviation Amount is 47.79x customer average. Destination country is new for customer. KYC risk score is 0.152 and country risk score is 4.,Escalate to manual review
+INV-0788,TXN-001735,LOW,KYC risk score is 0.175 and country risk score is 2.,No action required
+INV-0789,TXN-001345,MEDIUM,Destination country is new for customer. KYC risk score is 0.182 and country risk score is 3.,Request additional information
+INV-0790,TXN-003158,LOW,KYC risk score is 0.263 and country risk score is 1.,No action required
+INV-0791,TXN-004251,LOW,KYC risk score is 0.289 and country risk score is 1.,No action required
+INV-0792,TXN-000897,LOW,KYC risk score is 0.22 and country risk score is 3.,No action required
+INV-0793,TXN-001920,LOW,KYC risk score is 0.363 and country risk score is 1.,No action required
+INV-0794,TXN-003416,HIGH,Matched rules: R-003 customer behavior deviation Amount is 24.98x customer average. Destination country is new for customer. KYC risk score is 0.184 and country risk score is 3.,Escalate to manual review
+INV-0795,TXN-000538,MEDIUM,KYC risk score is 0.097 and country risk score is 3.,Request additional information
+INV-0796,TXN-003269,LOW,KYC risk score is 0.166 and country risk score is 3.,No action required
+INV-0797,TXN-002528,LOW,KYC risk score is 0.123 and country risk score is 2.,No action required
+INV-0798,TXN-000389,LOW,KYC risk score is 0.114 and country risk score is 1.,No action required
+INV-0799,TXN-003958,LOW,KYC risk score is 0.34 and country risk score is 3.,No action required
+INV-0800,TXN-003210,MEDIUM,Matched rules: R-002 high-risk jurisdiction Destination country is new for customer. KYC risk score is 0.202 and country risk score is 4.,Request additional information
+INV-0801,TXN-001093,LOW,KYC risk score is 0.337 and country risk score is 1.,No action required
+INV-0802,TXN-000377,LOW,KYC risk score is 0.182 and country risk score is 1.,No action required
+INV-0803,TXN-001443,HIGH,Destination country is new for customer. KYC risk score is 0.254 and country risk score is 3.,Escalate to manual review
+INV-0804,TXN-004413,LOW,KYC risk score is 0.193 and country risk score is 1.,No action required
+INV-0805,TXN-001267,LOW,KYC risk score is 0.168 and country risk score is 2.,No action required
+INV-0806,TXN-003946,HIGH,Destination country is new for customer. KYC risk score is 0.332 and country risk score is 3.,Escalate to manual review
+INV-0807,TXN-002519,LOW,KYC risk score is 0.067 and country risk score is 1.,No action required
+INV-0808,TXN-004811,LOW,KYC risk score is 0.112 and country risk score is 2.,No action required
+INV-0809,TXN-002638,HIGH,Matched rules: R-003 customer behavior deviation Amount is 15.13x customer average. Destination country is new for customer. KYC risk score is 0.331 and country risk score is 3.,Escalate to manual review
+INV-0810,TXN-003348,HIGH,Matched rules: R-003 customer behavior deviation Amount is 16.6x customer average. KYC risk score is 0.285 and country risk score is 3.,Escalate to manual review
+INV-0811,TXN-001488,HIGH,Matched rules: R-003 customer behavior deviation; R-004 large crypto transfer; R-005 opaque merchant category Amount is 87.42x customer average. Destination country is new for customer. KYC risk score is 0.208 and country risk score is 3.,Escalate to manual review
+INV-0812,TXN-002283,LOW,KYC risk score is 0.235 and country risk score is 1.,No action required
+INV-0813,TXN-000730,LOW,KYC risk score is 0.297 and country risk score is 1.,No action required
+INV-0814,TXN-002015,MEDIUM,KYC risk score is 0.312 and country risk score is 3.,Request additional information
+INV-0815,TXN-001172,HIGH,Matched rules: R-002 high-risk jurisdiction; R-003 customer behavior deviation Amount is 38.97x customer average. Destination country is new for customer. KYC risk score is 0.333 and country risk score is 5.,Escalate to manual review
+INV-0816,TXN-002292,MEDIUM,KYC risk score is 0.409 and country risk score is 3.,Request additional information
+INV-0817,TXN-002815,MEDIUM,KYC risk score is 0.215 and country risk score is 3.,Request additional information
+INV-0818,TXN-004915,LOW,KYC risk score is 0.069 and country risk score is 2.,No action required
+INV-0819,TXN-001057,LOW,KYC risk score is 0.375 and country risk score is 1.,No action required
+INV-0820,TXN-001968,LOW,KYC risk score is 0.228 and country risk score is 2.,No action required
+INV-0821,TXN-000598,LOW,KYC risk score is 0.318 and country risk score is 1.,No action required
+INV-0822,TXN-002340,LOW,KYC risk score is 0.273 and country risk score is 3.,No action required
+INV-0823,TXN-000688,MEDIUM,KYC risk score is 0.494 and country risk score is 3.,Request additional information
+INV-0824,TXN-002209,LOW,KYC risk score is 0.336 and country risk score is 1.,No action required
+INV-0825,TXN-001388,LOW,KYC risk score is 0.178 and country risk score is 1.,No action required
+INV-0826,TXN-000671,LOW,KYC risk score is 0.338 and country risk score is 1.,No action required
+INV-0827,TXN-002880,LOW,KYC risk score is 0.332 and country risk score is 1.,No action required
+INV-0828,TXN-004265,LOW,KYC risk score is 0.31 and country risk score is 1.,No action required
+INV-0829,TXN-002808,LOW,KYC risk score is 0.272 and country risk score is 2.,No action required
+INV-0830,TXN-002091,MEDIUM,KYC risk score is 0.318 and country risk score is 3.,Request additional information
+INV-0831,TXN-002801,MEDIUM,Destination country is new for customer. KYC risk score is 0.327 and country risk score is 3.,Request additional information
+INV-0832,TXN-000961,MEDIUM,KYC risk score is 0.337 and country risk score is 3.,Request additional information
+INV-0833,TXN-002057,LOW,KYC risk score is 0.069 and country risk score is 3.,No action required
+INV-0834,TXN-002507,HIGH,Matched rules: R-003 customer behavior deviation; R-005 opaque merchant category Amount is 70.34x customer average. Destination country is new for customer. KYC risk score is 0.158 and country risk score is 3.,Escalate to manual review
+INV-0835,TXN-001785,HIGH,Matched rules: R-002 high-risk jurisdiction; R-003 customer behavior deviation; R-005 opaque merchant category Amount is 51.09x customer average. Destination country is new for customer. KYC risk score is 0.228 and country risk score is 4.,Escalate to manual review
+INV-0836,TXN-004439,LOW,KYC risk score is 0.215 and country risk score is 2.,No action required
+INV-0837,TXN-001215,HIGH,Matched rules: R-002 high-risk jurisdiction; R-003 customer behavior deviation; R-005 opaque merchant category Amount is 86.59x customer average. Destination country is new for customer. KYC risk score is 0.188 and country risk score is 4.,Escalate to manual review
+INV-0838,TXN-002829,HIGH,Matched rules: R-002 high-risk jurisdiction; R-005 opaque merchant category Destination country is new for customer. KYC risk score is 0.192 and country risk score is 4.,Escalate to manual review
+INV-0839,TXN-000500,MEDIUM,Destination country is new for customer. KYC risk score is 0.275 and country risk score is 3.,Request additional information
+INV-0840,TXN-000464,LOW,KYC risk score is 0.139 and country risk score is 3.,No action required
+INV-0841,TXN-004319,LOW,KYC risk score is 0.184 and country risk score is 3.,No action required
+INV-0842,TXN-003132,MEDIUM,Matched rules: R-002 high-risk jurisdiction Destination country is new for customer. KYC risk score is 0.263 and country risk score is 4.,Request additional information
+INV-0843,TXN-004950,LOW,KYC risk score is 0.331 and country risk score is 2.,No action required
+INV-0844,TXN-004818,HIGH,Matched rules: R-003 customer behavior deviation; R-004 large crypto transfer Amount is 59.22x customer average. Destination country is new for customer. KYC risk score is 0.308 and country risk score is 3.,Escalate to manual review
+INV-0845,TXN-001040,HIGH,Matched rules: R-002 high-risk jurisdiction; R-003 customer behavior deviation; R-005 opaque merchant category Amount is 77.75x customer average. Destination country is new for customer. KYC risk score is 0.278 and country risk score is 4.,Escalate to manual review
+INV-0846,TXN-000293,LOW,KYC risk score is 0.346 and country risk score is 1.,No action required
+INV-0847,TXN-002857,LOW,KYC risk score is 0.376 and country risk score is 2.,No action required
+INV-0848,TXN-000492,LOW,KYC risk score is 0.106 and country risk score is 3.,No action required
+INV-0849,TXN-001584,HIGH,Matched rules: R-003 customer behavior deviation; R-005 opaque merchant category Amount is 32.38x customer average. Destination country is new for customer. KYC risk score is 0.486 and country risk score is 3.,Escalate to manual review
+INV-0850,TXN-002058,LOW,KYC risk score is 0.069 and country risk score is 2.,No action required
+INV-0851,TXN-000614,LOW,KYC risk score is 0.18 and country risk score is 1.,No action required
+INV-0852,TXN-002948,HIGH,Matched rules: R-002 high-risk jurisdiction; R-003 customer behavior deviation Amount is 62.73x customer average. Destination country is new for customer. KYC risk score is 0.249 and country risk score is 4.,Escalate to manual review
+INV-0853,TXN-004852,LOW,KYC risk score is 0.35 and country risk score is 2.,No action required
+INV-0854,TXN-002486,LOW,KYC risk score is 0.343 and country risk score is 1.,No action required
+INV-0855,TXN-001122,MEDIUM,KYC risk score is 0.11 and country risk score is 3.,Request additional information
+INV-0856,TXN-004452,LOW,KYC risk score is 0.15 and country risk score is 1.,No action required
+INV-0857,TXN-001538,HIGH,Matched rules: R-002 high-risk jurisdiction; R-003 customer behavior deviation Amount is 44.44x customer average. Destination country is new for customer. KYC risk score is 0.345 and country risk score is 4.,Escalate to manual review
+INV-0858,TXN-002316,LOW,KYC risk score is 0.425 and country risk score is 3.,No action required
+INV-0859,TXN-004751,LOW,KYC risk score is 0.179 and country risk score is 1.,No action required
+INV-0860,TXN-002322,LOW,KYC risk score is 0.319 and country risk score is 1.,No action required
+INV-0861,TXN-001248,LOW,KYC risk score is 0.123 and country risk score is 1.,No action required
+INV-0862,TXN-002023,HIGH,Matched rules: R-003 customer behavior deviation Amount is 59.67x customer average. Destination country is new for customer. KYC risk score is 0.228 and country risk score is 3.,Escalate to manual review
+INV-0863,TXN-002889,LOW,KYC risk score is 0.108 and country risk score is 1.,No action required
+INV-0864,TXN-003626,LOW,KYC risk score is 0.201 and country risk score is 1.,No action required
+INV-0865,TXN-000498,LOW,KYC risk score is 0.152 and country risk score is 1.,No action required
+INV-0866,TXN-000089,MEDIUM,KYC risk score is 0.319 and country risk score is 3.,Request additional information
+INV-0867,TXN-003655,HIGH,Matched rules: R-002 high-risk jurisdiction Destination country is new for customer. KYC risk score is 0.308 and country risk score is 5.,Escalate to manual review
+INV-0868,TXN-003952,LOW,KYC risk score is 0.307 and country risk score is 1.,No action required
+INV-0869,TXN-000609,LOW,KYC risk score is 0.135 and country risk score is 1.,No action required
+INV-0870,TXN-002254,LOW,KYC risk score is 0.321 and country risk score is 2.,No action required
+INV-0871,TXN-004919,HIGH,Matched rules: R-003 customer behavior deviation Amount is 51.69x customer average. Destination country is new for customer. KYC risk score is 0.205 and country risk score is 3.,Escalate to manual review
+INV-0872,TXN-003245,MEDIUM,KYC risk score is 0.339 and country risk score is 3.,Request additional information
+INV-0873,TXN-002388,LOW,KYC risk score is 0.227 and country risk score is 3.,No action required
+INV-0874,TXN-001170,LOW,KYC risk score is 0.16 and country risk score is 3.,No action required
+INV-0875,TXN-001898,HIGH,Matched rules: R-002 high-risk jurisdiction; R-003 customer behavior deviation; R-004 large crypto transfer; R-005 opaque merchant category Amount is 69.55x customer average. Destination country is new for customer. KYC risk score is 0.15 and country risk score is 4.,Escalate to manual review
+INV-0876,TXN-003242,MEDIUM,KYC risk score is 0.199 and country risk score is 2.,Request additional information
+INV-0877,TXN-000876,LOW,Destination country is new for customer. KYC risk score is 0.191 and country risk score is 1.,No action required
+INV-0878,TXN-004037,LOW,KYC risk score is 0.409 and country risk score is 1.,No action required
+INV-0879,TXN-000382,HIGH,Matched rules: R-003 customer behavior deviation; R-005 opaque merchant category Amount is 71.45x customer average. Destination country is new for customer. KYC risk score is 0.396 and country risk score is 3.,Escalate to manual review
+INV-0880,TXN-001079,MEDIUM,KYC risk score is 0.278 and country risk score is 3.,Request additional information
+INV-0881,TXN-002560,LOW,KYC risk score is 0.105 and country risk score is 2.,No action required
+INV-0882,TXN-001419,LOW,KYC risk score is 0.287 and country risk score is 3.,No action required
+INV-0883,TXN-001493,MEDIUM,KYC risk score is 0.559 and country risk score is 2.,Request additional information
+INV-0884,TXN-001858,LOW,KYC risk score is 0.442 and country risk score is 1.,No action required
+INV-0885,TXN-002315,LOW,Destination country is new for customer. KYC risk score is 0.3 and country risk score is 1.,No action required
+INV-0886,TXN-000570,MEDIUM,KYC risk score is 0.245 and country risk score is 3.,Request additional information
+INV-0887,TXN-003765,LOW,KYC risk score is 0.072 and country risk score is 2.,No action required
+INV-0888,TXN-003745,MEDIUM,KYC risk score is 0.409 and country risk score is 3.,Request additional information
+INV-0889,TXN-000654,HIGH,Matched rules: R-003 customer behavior deviation; R-005 opaque merchant category Amount is 69.64x customer average. Destination country is new for customer. KYC risk score is 0.296 and country risk score is 3.,Escalate to manual review
+INV-0890,TXN-000863,LOW,KYC risk score is 0.248 and country risk score is 3.,No action required
+INV-0891,TXN-000487,HIGH,Matched rules: R-003 customer behavior deviation; R-004 large crypto transfer Amount is 25.66x customer average. Destination country is new for customer. KYC risk score is 0.394 and country risk score is 3.,Escalate to manual review
+INV-0892,TXN-000296,HIGH,Matched rules: R-002 high-risk jurisdiction; R-003 customer behavior deviation; R-004 large crypto transfer Amount is 55.75x customer average. Destination country is new for customer. KYC risk score is 0.151 and country risk score is 4.,Escalate to manual review
+INV-0893,TXN-002992,LOW,KYC risk score is 0.063 and country risk score is 3.,No action required
+INV-0894,TXN-001333,MEDIUM,Destination country is new for customer. KYC risk score is 0.167 and country risk score is 3.,Request additional information
+INV-0895,TXN-002358,LOW,KYC risk score is 0.149 and country risk score is 3.,No action required
+INV-0896,TXN-002575,LOW,KYC risk score is 0.152 and country risk score is 1.,No action required
+INV-0897,TXN-003223,LOW,KYC risk score is 0.237 and country risk score is 2.,No action required
+INV-0898,TXN-000775,LOW,KYC risk score is 0.336 and country risk score is 1.,No action required
+INV-0899,TXN-003866,MEDIUM,KYC risk score is 0.405 and country risk score is 2.,Request additional information
+INV-0900,TXN-000991,HIGH,Matched rules: R-002 high-risk jurisdiction; R-003 customer behavior deviation; R-004 large crypto transfer Amount is 71.02x customer average. Destination country is new for customer. KYC risk score is 0.154 and country risk score is 4.,Escalate to manual review
+INV-0901,TXN-001393,LOW,KYC risk score is 0.314 and country risk score is 3.,No action required
+INV-0902,TXN-000312,LOW,KYC risk score is 0.263 and country risk score is 1.,No action required
+INV-0903,TXN-004613,MEDIUM,Destination country is new for customer. KYC risk score is 0.319 and country risk score is 1.,Request additional information
+INV-0904,TXN-004408,LOW,KYC risk score is 0.295 and country risk score is 3.,No action required
+INV-0905,TXN-002363,LOW,KYC risk score is 0.14 and country risk score is 1.,No action required
+INV-0906,TXN-000133,MEDIUM,Destination country is new for customer. KYC risk score is 0.168 and country risk score is 2.,Request additional information
+INV-0907,TXN-001282,HIGH,Matched rules: R-003 customer behavior deviation Amount is 29.16x customer average. Destination country is new for customer. KYC risk score is 0.193 and country risk score is 3.,Escalate to manual review
+INV-0908,TXN-000284,HIGH,Matched rules: R-002 high-risk jurisdiction; R-003 customer behavior deviation Amount is 61.72x customer average. Destination country is new for customer. KYC risk score is 0.187 and country risk score is 4.,Escalate to manual review
+INV-0909,TXN-004711,LOW,KYC risk score is 0.133 and country risk score is 1.,No action required
+INV-0910,TXN-002221,MEDIUM,KYC risk score is 0.396 and country risk score is 2.,Request additional information
+INV-0911,TXN-001609,LOW,KYC risk score is 0.186 and country risk score is 3.,No action required
+INV-0912,TXN-000745,LOW,KYC risk score is 0.196 and country risk score is 1.,No action required
+INV-0913,TXN-001394,MEDIUM,KYC risk score is 0.322 and country risk score is 2.,Request additional information
+INV-0914,TXN-000758,LOW,KYC risk score is 0.153 and country risk score is 1.,No action required
+INV-0915,TXN-004980,HIGH,Matched rules: R-002 high-risk jurisdiction; R-003 customer behavior deviation Amount is 21.54x customer average. Destination country is new for customer. KYC risk score is 0.335 and country risk score is 4.,Escalate to manual review
+INV-0916,TXN-001006,HIGH,Matched rules: R-002 high-risk jurisdiction; R-003 customer behavior deviation; R-005 opaque merchant category Amount is 18.72x customer average. Destination country is new for customer. KYC risk score is 0.486 and country risk score is 5.,Escalate to manual review
+INV-0917,TXN-003869,LOW,KYC risk score is 0.559 and country risk score is 2.,No action required
+INV-0918,TXN-004284,MEDIUM,Matched rules: R-002 high-risk jurisdiction Destination country is new for customer. KYC risk score is 0.327 and country risk score is 4.,Request additional information
+INV-0919,TXN-003413,MEDIUM,Destination country is new for customer. KYC risk score is 0.201 and country risk score is 1.,Request additional information
+INV-0920,TXN-002827,MEDIUM,Matched rules: R-002 high-risk jurisdiction Destination country is new for customer. KYC risk score is 0.288 and country risk score is 4.,Request additional information
+INV-0921,TXN-003295,MEDIUM,KYC risk score is 0.322 and country risk score is 3.,Request additional information
+INV-0922,TXN-000742,LOW,KYC risk score is 0.188 and country risk score is 1.,No action required
+INV-0923,TXN-003016,LOW,KYC risk score is 0.235 and country risk score is 2.,No action required
+INV-0924,TXN-003339,LOW,KYC risk score is 0.155 and country risk score is 1.,No action required
+INV-0925,TXN-003464,LOW,KYC risk score is 0.32 and country risk score is 3.,No action required
+INV-0926,TXN-004550,MEDIUM,Destination country is new for customer. KYC risk score is 0.152 and country risk score is 1.,Request additional information
+INV-0927,TXN-004448,MEDIUM,Matched rules: R-002 high-risk jurisdiction Destination country is new for customer. KYC risk score is 0.173 and country risk score is 4.,Request additional information
+INV-0928,TXN-003266,MEDIUM,KYC risk score is 0.278 and country risk score is 2.,Request additional information
+INV-0929,TXN-002234,LOW,KYC risk score is 0.069 and country risk score is 1.,No action required
+INV-0930,TXN-003162,LOW,KYC risk score is 0.343 and country risk score is 1.,No action required
+INV-0931,TXN-002770,LOW,Destination country is new for customer. KYC risk score is 0.405 and country risk score is 1.,No action required
+INV-0932,TXN-002330,LOW,KYC risk score is 0.096 and country risk score is 3.,No action required
+INV-0933,TXN-002655,HIGH,Matched rules: R-002 high-risk jurisdiction; R-003 customer behavior deviation; R-005 opaque merchant category Amount is 10.42x customer average. Destination country is new for customer. KYC risk score is 0.149 and country risk score is 4.,Escalate to manual review
+INV-0934,TXN-003078,LOW,KYC risk score is 0.331 and country risk score is 2.,No action required
+INV-0935,TXN-004710,MEDIUM,KYC risk score is 0.098 and country risk score is 2.,Request additional information
+INV-0936,TXN-003172,LOW,KYC risk score is 0.186 and country risk score is 2.,No action required
+INV-0937,TXN-000044,LOW,KYC risk score is 0.112 and country risk score is 2.,No action required
+INV-0938,TXN-003397,LOW,KYC risk score is 0.193 and country risk score is 3.,No action required
+INV-0939,TXN-001311,LOW,KYC risk score is 0.185 and country risk score is 3.,No action required
+INV-0940,TXN-002870,LOW,KYC risk score is 0.163 and country risk score is 1.,No action required
+INV-0941,TXN-001867,HIGH,Matched rules: R-002 high-risk jurisdiction; R-003 customer behavior deviation; R-005 opaque merchant category Amount is 18.07x customer average. Destination country is new for customer. KYC risk score is 0.336 and country risk score is 4.,Escalate to manual review
+INV-0942,TXN-003164,LOW,KYC risk score is 0.467 and country risk score is 1.,No action required
+INV-0943,TXN-003997,HIGH,Matched rules: R-002 high-risk jurisdiction; R-003 customer behavior deviation Amount is 84.42x customer average. Destination country is new for customer. KYC risk score is 0.183 and country risk score is 4.,Escalate to manual review
+INV-0944,TXN-002535,HIGH,Matched rules: R-002 high-risk jurisdiction; R-003 customer behavior deviation; R-005 opaque merchant category Amount is 24.05x customer average. Destination country is new for customer. KYC risk score is 0.173 and country risk score is 5.,Escalate to manual review
+INV-0945,TXN-004954,LOW,KYC risk score is 0.406 and country risk score is 3.,No action required
+INV-0946,TXN-001395,LOW,KYC risk score is 0.111 and country risk score is 1.,No action required
+INV-0947,TXN-004577,LOW,KYC risk score is 0.445 and country risk score is 1.,No action required
+INV-0948,TXN-000551,LOW,KYC risk score is 0.187 and country risk score is 1.,No action required
+INV-0949,TXN-004331,LOW,KYC risk score is 0.245 and country risk score is 2.,No action required
+INV-0950,TXN-003852,LOW,KYC risk score is 0.053 and country risk score is 2.,No action required
+INV-0951,TXN-000626,MEDIUM,KYC risk score is 0.107 and country risk score is 3.,Request additional information
+INV-0952,TXN-001653,LOW,KYC risk score is 0.376 and country risk score is 1.,No action required
+INV-0953,TXN-003366,LOW,KYC risk score is 0.196 and country risk score is 2.,No action required
+INV-0954,TXN-001913,LOW,KYC risk score is 0.234 and country risk score is 2.,No action required
+INV-0955,TXN-002874,HIGH,Matched rules: R-002 high-risk jurisdiction; R-003 customer behavior deviation Amount is 40.73x customer average. Destination country is new for customer. KYC risk score is 0.267 and country risk score is 4.,Escalate to manual review
+INV-0956,TXN-002367,LOW,KYC risk score is 0.22 and country risk score is 1.,No action required
+INV-0957,TXN-001566,LOW,KYC risk score is 0.18 and country risk score is 1.,No action required
+INV-0958,TXN-001905,LOW,KYC risk score is 0.307 and country risk score is 1.,No action required
+INV-0959,TXN-001996,HIGH,Matched rules: R-003 customer behavior deviation; R-005 opaque merchant category Amount is 19.02x customer average. Destination country is new for customer. KYC risk score is 0.216 and country risk score is 3.,Escalate to manual review
+INV-0960,TXN-000964,MEDIUM,Destination country is new for customer. KYC risk score is 0.559 and country risk score is 1.,Request additional information
+INV-0961,TXN-000756,LOW,KYC risk score is 0.318 and country risk score is 1.,No action required
+INV-0962,TXN-001159,LOW,KYC risk score is 0.257 and country risk score is 2.,No action required
+INV-0963,TXN-004007,MEDIUM,KYC risk score is 0.282 and country risk score is 2.,Request additional information
+INV-0964,TXN-000427,LOW,KYC risk score is 0.249 and country risk score is 1.,No action required
+INV-0965,TXN-003579,LOW,KYC risk score is 0.255 and country risk score is 1.,No action required
+INV-0966,TXN-002343,LOW,KYC risk score is 0.297 and country risk score is 2.,No action required
+INV-0967,TXN-002622,MEDIUM,KYC risk score is 0.286 and country risk score is 3.,Request additional information
+INV-0968,TXN-002537,LOW,KYC risk score is 0.16 and country risk score is 2.,No action required
+INV-0969,TXN-003934,HIGH,Matched rules: R-002 high-risk jurisdiction; R-003 customer behavior deviation Amount is 22.44x customer average. Destination country is new for customer. KYC risk score is 0.133 and country risk score is 4.,Escalate to manual review
+INV-0970,TXN-004330,LOW,KYC risk score is 0.105 and country risk score is 2.,No action required
+INV-0971,TXN-001678,MEDIUM,KYC risk score is 0.186 and country risk score is 3.,Request additional information
+INV-0972,TXN-004680,LOW,KYC risk score is 0.114 and country risk score is 1.,No action required
+INV-0973,TXN-004643,MEDIUM,KYC risk score is 0.29 and country risk score is 1.,Request additional information
+INV-0974,TXN-000161,LOW,KYC risk score is 0.097 and country risk score is 3.,No action required
+INV-0975,TXN-002287,LOW,KYC risk score is 0.289 and country risk score is 1.,No action required
+INV-0976,TXN-003883,LOW,KYC risk score is 0.228 and country risk score is 1.,No action required
+INV-0977,TXN-004974,LOW,KYC risk score is 0.255 and country risk score is 2.,No action required
+INV-0978,TXN-000733,LOW,KYC risk score is 0.297 and country risk score is 1.,No action required
+INV-0979,TXN-001959,LOW,KYC risk score is 0.139 and country risk score is 3.,No action required
+INV-0980,TXN-000328,LOW,KYC risk score is 0.127 and country risk score is 1.,No action required
+INV-0981,TXN-001849,LOW,KYC risk score is 0.14 and country risk score is 2.,No action required
+INV-0982,TXN-003889,MEDIUM,KYC risk score is 0.325 and country risk score is 3.,Request additional information
+INV-0983,TXN-004816,MEDIUM,Destination country is new for customer. KYC risk score is 0.338 and country risk score is 2.,Request additional information
+INV-0984,TXN-004992,MEDIUM,Matched rules: R-002 high-risk jurisdiction Destination country is new for customer. KYC risk score is 0.231 and country risk score is 4.,Request additional information
+INV-0985,TXN-000948,MEDIUM,Destination country is new for customer. KYC risk score is 0.32 and country risk score is 2.,Request additional information
+INV-0986,TXN-003315,LOW,KYC risk score is 0.162 and country risk score is 1.,No action required
+INV-0987,TXN-000582,HIGH,Matched rules: R-003 customer behavior deviation; R-004 large crypto transfer; R-005 opaque merchant category Amount is 50.6x customer average. Destination country is new for customer. KYC risk score is 0.203 and country risk score is 3.,Escalate to manual review
+INV-0988,TXN-004206,MEDIUM,Matched rules: R-002 high-risk jurisdiction Destination country is new for customer. KYC risk score is 0.234 and country risk score is 4.,Request additional information
+INV-0989,TXN-002744,HIGH,Matched rules: R-003 customer behavior deviation Amount is 61.45x customer average. Destination country is new for customer. KYC risk score is 0.106 and country risk score is 3.,Escalate to manual review
+INV-0990,TXN-000013,MEDIUM,Destination country is new for customer. KYC risk score is 0.469 and country risk score is 3.,Request additional information
+INV-0991,TXN-001318,MEDIUM,KYC risk score is 0.405 and country risk score is 3.,Request additional information
+INV-0992,TXN-003792,MEDIUM,KYC risk score is 0.249 and country risk score is 3.,Request additional information
+INV-0993,TXN-003597,LOW,KYC risk score is 0.149 and country risk score is 3.,No action required
+INV-0994,TXN-000429,LOW,KYC risk score is 0.22 and country risk score is 3.,No action required
+INV-0995,TXN-003512,HIGH,Matched rules: R-003 customer behavior deviation; R-005 opaque merchant category Amount is 47.45x customer average. KYC risk score is 0.106 and country risk score is 3.,Escalate to manual review
+INV-0996,TXN-002109,MEDIUM,KYC risk score is 0.396 and country risk score is 2.,Request additional information
+INV-0997,TXN-000050,MEDIUM,Destination country is new for customer. KYC risk score is 0.215 and country risk score is 3.,Request additional information
+INV-0998,TXN-004895,LOW,KYC risk score is 0.28 and country risk score is 1.,No action required
+INV-0999,TXN-002624,LOW,KYC risk score is 0.069 and country risk score is 1.,No action required
+INV-1000,TXN-003942,LOW,KYC risk score is 0.187 and country risk score is 2.,No action required
