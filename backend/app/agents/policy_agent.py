@@ -4,6 +4,7 @@ from typing import Any
 
 from ..rag.reranker import rerank_documents
 from ..rag.retriever import search_policies
+from .evidence import normalize_retrieval_rows
 
 
 def retrieve_policy_evidence(policy_query: str, top_k: int = 3) -> list[dict[str, Any]]:
@@ -23,4 +24,4 @@ def retrieve_policy_evidence(policy_query: str, top_k: int = 3) -> list[dict[str
                 "similarity_score": document.get("similarity_score", 0.0),
             }
         )
-    return evidence
+    return normalize_retrieval_rows(evidence, kind="policy", metadata_key="policy_id")

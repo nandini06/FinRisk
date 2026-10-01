@@ -4,6 +4,7 @@ from typing import Any
 
 from ..rag.reranker import rerank_documents
 from ..rag.retriever import search_cases
+from .evidence import normalize_retrieval_rows
 
 
 def retrieve_similar_cases(case_query: str, top_k: int = 3) -> list[dict[str, Any]]:
@@ -23,4 +24,4 @@ def retrieve_similar_cases(case_query: str, top_k: int = 3) -> list[dict[str, An
                 "similarity_score": document.get("similarity_score", 0.0),
             }
         )
-    return cases
+    return normalize_retrieval_rows(cases, kind="case", metadata_key="case_id")

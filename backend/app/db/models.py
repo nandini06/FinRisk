@@ -18,6 +18,8 @@ class Customer(Base):
     country: Mapped[str | None] = mapped_column(String(64))
     kyc_level: Mapped[str | None] = mapped_column(String(32))
     kyc_risk_score: Mapped[float] = mapped_column(Float, default=0.0)
+    # Legacy storage name. seed_postgres maps this directly from the synthetic
+    # dataset's avg_monthly_transaction_amount field.
     avg_transaction_amount: Mapped[Decimal | None] = mapped_column(Numeric(18, 2))
     created_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow, nullable=False)
     updated_at: Mapped[datetime] = mapped_column(

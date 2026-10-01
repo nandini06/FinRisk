@@ -1,7 +1,22 @@
-from sqlalchemy import select
+from sqlalchemy import delete, select
 from sqlalchemy.orm import Session
 
 from .models import Customer, HistoricalCase, InvestigationReport, Transaction
+
+
+def is_legacy_reference_report_payload(payload: object) -> bool:
+    if not isinstance(payload, dict):
+        return False
+    required = {"example_id", "expected_risk_level", "gold_explanation"}
+    example_id = payload.get("example_id")
+    return (
+        required.issubset(payload)
+        and isinstance(example_id, str)
+        and example_id.startswith("INV-")
+        and "transaction_id" not in payload
+        and "trace" not in payload
+        and "verification" not in payload
+    )
 
 
 def get_customer_by_customer_id(db: Session, customer_id: str) -> Customer | None:
@@ -61,6 +76,25 @@ def get_latest_report_by_transaction_id(
         select(InvestigationReport)
         .where(InvestigationReport.transaction_id == transaction_id)
         .order_by(InvestigationReport.created_at.desc())
-        .limit(1)
     )
-    return db.scalar(stmt)
+    for report in db.scalars(stmt):
+        if not is_legacy_reference_report_payload(report.report_json):
+            return report
+    return None
+
+
+def get_legacy_reference_reports(db: Session) -> list[InvestigationReport]:
+    return [
+        report
+        for report in db.scalars(select(InvestigationReport))
+        if is_legacy_reference_report_payload(report.report_json)
+    ]
+
+
+def delete_legacy_reference_reports(db: Session) -> int:
+    ids = [report.id for report in get_legacy_reference_reports(db)]
+    if not ids:
+        return 0
+    result = db.execute(delete(InvestigationReport).where(InvestigationReport.id.in_(ids)))
+    db.commit()
+    return int(result.rowcount or 0)

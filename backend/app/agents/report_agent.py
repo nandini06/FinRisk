@@ -3,88 +3,23 @@ from __future__ import annotations
 import json
 from typing import Any
 
-from ..llm.gemini_client import generate_json
-
-REQUIRED_KEYS = {
-    "transaction_id",
-    "risk_level",
-    "confidence",
-    "summary",
-    "risk_factors",
-    "evidence",
-    "similar_cases",
-    "recommended_action",
-}
+from ..llm.gemini_client import GeminiProviderError, generate_json
+from ..schemas.investigation import ReportOutput
+from .evidence import validate_report_citations
 
 
-def _ensure_list(value: Any, field_name: str) -> list[Any]:
-    if not isinstance(value, list):
-        raise RuntimeError(f"Report output field '{field_name}' must be a list.")
-    return value
-
-
-def _normalize_confidence(value: Any) -> float:
-    try:
-        numeric = float(value)
-    except (TypeError, ValueError) as exc:
-        raise RuntimeError("Report output field 'confidence' must be numeric.") from exc
-    return max(0.0, min(1.0, numeric))
-
-
-def _validate_risk_factor_evidence(risk_factors: list[Any]) -> None:
-    for index, risk_factor in enumerate(risk_factors):
-        if not isinstance(risk_factor, dict):
-            raise RuntimeError(f"risk_factors[{index}] must be an object.")
-
-        evidence_value = risk_factor.get("evidence")
-        if evidence_value is None:
-            raise RuntimeError(
-                f"risk_factors[{index}] is missing evidence citation. "
-                "Each risk factor must cite policy, case, or anomaly evidence."
-            )
-
-        if isinstance(evidence_value, str) and not evidence_value.strip():
-            raise RuntimeError(f"risk_factors[{index}].evidence cannot be empty.")
-
-        if isinstance(evidence_value, list) and len(evidence_value) == 0:
-            raise RuntimeError(f"risk_factors[{index}].evidence cannot be an empty list.")
-
-
-def _validate_report_payload(payload: dict[str, Any]) -> dict[str, Any]:
-    missing = [key for key in REQUIRED_KEYS if key not in payload]
-    if missing:
-        raise RuntimeError(f"Report output is missing required keys: {', '.join(missing)}")
-
-    risk_factors = _ensure_list(payload.get("risk_factors"), "risk_factors")
-    evidence = _ensure_list(payload.get("evidence"), "evidence")
-    similar_cases = _ensure_list(payload.get("similar_cases"), "similar_cases")
-
-    _validate_risk_factor_evidence(risk_factors)
-
-    transaction_id = str(payload.get("transaction_id", "")).strip()
-    risk_level = str(payload.get("risk_level", "")).strip().upper()
-    summary = str(payload.get("summary", "")).strip()
-    recommended_action = str(payload.get("recommended_action", "")).strip()
-
-    if not transaction_id:
-        raise RuntimeError("Report output field 'transaction_id' is empty.")
-    if not risk_level:
-        raise RuntimeError("Report output field 'risk_level' is empty.")
-    if not summary:
-        raise RuntimeError("Report output field 'summary' is empty.")
-    if not recommended_action:
-        raise RuntimeError("Report output field 'recommended_action' is empty.")
-
-    return {
-        "transaction_id": transaction_id,
-        "risk_level": risk_level,
-        "confidence": _normalize_confidence(payload.get("confidence")),
-        "summary": summary,
-        "risk_factors": risk_factors,
-        "evidence": evidence,
-        "similar_cases": similar_cases,
-        "recommended_action": recommended_action,
-    }
+def _validate_report(
+    payload: dict[str, Any],
+    transaction_id: str,
+    evidence_registry: dict[str, dict[str, Any]],
+) -> dict[str, Any]:
+    report = ReportOutput.model_validate(payload).model_dump()
+    if report["transaction_id"] != transaction_id:
+        raise ValueError(
+            f"transaction_id must be {transaction_id!r}, got {report['transaction_id']!r}"
+        )
+    validate_report_citations(report, evidence_registry)
+    return report
 
 
 def generate_investigation_report(
@@ -92,53 +27,86 @@ def generate_investigation_report(
     customer: dict[str, Any],
     features: dict[str, Any],
     anomaly_score: float,
-    policy_evidence: list[dict[str, Any]],
-    similar_cases: list[dict[str, Any]],
+    evidence_registry: dict[str, dict[str, Any]],
 ) -> dict[str, Any]:
+    transaction_id = str(transaction.get("transaction_id") or "")
     prompt = f"""
-You are a financial crime investigator creating an explainable AML risk report.
+You are a financial risk investigator. Create a concise evidence-grounded report.
 
-Return ONLY valid JSON with exactly these top-level keys:
-- transaction_id (string)
-- risk_level (string: LOW, MEDIUM, HIGH)
-- confidence (number from 0 to 1)
-- summary (string)
-- risk_factors (array)
-- evidence (array)
-- similar_cases (array)
-- recommended_action (string)
+Return JSON matching this contract:
+- transaction_id: exactly {transaction_id}
+- risk_level: LOW, MEDIUM, or HIGH; this is the model's overall evidence-based assessment,
+  not a severity copied from one policy
+- risk_level_rationale: explicit explanation of the overall assessment
+- risk_level_source_ids: nonempty source IDs supporting that assessment
+- confidence: finite number from 0 to 1 (an uncalibrated model assessment)
+- summary: string
+- risk_factors: array of objects with factor, severity, policy_severities,
+  severity_rationale, explanation, source_ids
+- similar_cases: array of objects with case_id, similarity_reason, decision
+- recommended_action: string
+- recommended_action_basis: POLICY_REQUIRED or DISCRETIONARY_HUMAN_REVIEW
+- recommended_action_source_ids: nonempty source IDs supporting the action
+- recommended_action_rationale: explanation of why the action is required or suggested
 
-Inputs:
+Every risk factor needs a nonempty source_ids list containing only IDs from the registry.
+Similar case IDs must exist as case:<case_id> in the registry. A source existing does not
+automatically support a claim; use its actual content. Do not reproduce an evidence list.
+
+Severity and action rules:
+- A risk factor's severity and the top-level risk_level are model assessments. Do not say a
+  policy defines, assigns, or requires that model-assessed level unless the cited policy actually
+  has that severity in its metadata.
+- policy_severities must list every cited policy ID with exactly the severity found in that
+  policy's metadata. Use an empty list when the factor cites no policy.
+- If a factor severity is higher than every cited policy severity, explain the elevation in
+  severity_rationale using cited fact or feature evidence. Do not attribute the elevation to policy.
+- Do not choose HIGH or MEDIUM merely to match an expected/reference label; none is supplied.
+- Use POLICY_REQUIRED only when the cited policy text explicitly requires the complete action.
+  Prefix such text with "Policy-required:" and cite the supporting policy.
+- If any material part of an action is a prudent recommendation rather than an explicit policy
+  requirement, use DISCRETIONARY_HUMAN_REVIEW, prefix the text with
+  "Suggested for human review:", and do not imply that holding, EDD, escalation, or documentation
+  is policy-mandated without policy text that says so.
+
+Baseline and geography rules:
+- customer.avg_monthly_transaction_amount is the dataset-provided customer monthly-average
+  amount baseline. It is not an average individual transaction amount. Its source generation
+  window and aggregation code are unavailable, so describe ratios as comparisons with the
+  provided synthetic monthly baseline, not as independently reconstructed customer history.
+- amount_vs_customer_avg is transaction amount divided by that provided monthly baseline.
+- Apply AML-003's 10x comparison only when a positive, explicitly monthly baseline is available.
+  If the available baseline has a different or unknown meaning, keep the observed deviation as
+  a factual finding but state that AML-003's threshold cannot be confirmed.
+- customer.country and transaction.origin_country are different facts. When mentioning both,
+  explicitly label the customer country and the transaction origin country; never combine them
+  with a slash or imply that the customer has two origin countries.
+
 transaction:
 {json.dumps(transaction, indent=2, default=str)}
-
 customer:
 {json.dumps(customer, indent=2, default=str)}
-
-features:
+computed_features:
 {json.dumps(features, indent=2, default=str)}
-
-anomaly_score:
-{json.dumps(anomaly_score, default=str)}
-
-policy_evidence:
-{json.dumps(policy_evidence, indent=2, default=str)}
-
-historical_cases:
-{json.dumps(similar_cases, indent=2, default=str)}
-
-Critical evidence rule:
-- Every item in risk_factors MUST include an `evidence` field that cites supporting evidence from:
-  - policy_evidence
-  - historical_cases
-  - anomaly features
-- Do not make unsupported claims.
-
-Output guidance:
-- Keep the report concise but specific.
-- If evidence is weak, reduce confidence and explain uncertainty in summary.
-- Do not include markdown, code fences, or extra text outside JSON.
+rule_based_anomaly_score:
+{json.dumps(anomaly_score)}
+evidence_registry:
+{json.dumps(evidence_registry, indent=2, default=str)}
 """.strip()
 
-    report_payload = generate_json(prompt)
-    return _validate_report_payload(report_payload)
+    error = ""
+    for attempt in range(2):
+        current_prompt = prompt
+        if attempt:
+            current_prompt += (
+                "\n\nThe previous output failed schema or citation validation. Return a corrected "
+                f"report using the same inputs. Validation feedback: {error}"
+            )
+        try:
+            payload = generate_json(current_prompt, response_schema=ReportOutput)
+            return _validate_report(payload, transaction_id, evidence_registry)
+        except GeminiProviderError as exc:
+            raise RuntimeError("Report provider request failed.") from exc
+        except Exception as exc:
+            error = str(exc)[:700]
+    raise RuntimeError(f"Report output validation failed after one repair: {error}")

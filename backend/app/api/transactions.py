@@ -6,7 +6,6 @@ from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
 
 from ..db.database import get_db
-from ..db.models import Customer, Transaction
 from ..db.repositories import (
     get_customer_by_customer_id,
     get_transaction_by_transaction_id,

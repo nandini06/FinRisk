@@ -22,7 +22,7 @@ def investigate_transaction(transaction_id: str) -> dict:
     except Exception as exc:
         raise HTTPException(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-            detail=f"Investigation workflow failed: {exc}",
+            detail=f"Investigation workflow failed ({type(exc).__name__}).",
         ) from exc
 
 

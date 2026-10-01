@@ -7,3 +7,5 @@ pandas
 chromadb
 sentence-transformers
 google-genai
+pydantic
+pytest

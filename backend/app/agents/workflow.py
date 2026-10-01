@@ -1,13 +1,19 @@
 from __future__ import annotations
 
+import math
+import re
 from datetime import datetime
 from decimal import Decimal
 from typing import Any
+
+from sqlalchemy.orm import Session
 
 from ..db.database import SessionLocal
 from ..db.repositories import create_investigation_report, get_transaction_with_customer
 from .anomaly_agent import run_anomaly_analysis
 from .case_agent import retrieve_similar_cases
+from .evidence import build_evidence_registry, merge_evidence_rows, registry_records
+from .inference_inputs import build_inference_inputs
 from .planner_agent import build_investigation_plan
 from .policy_agent import retrieve_policy_evidence
 from .report_agent import generate_investigation_report
@@ -29,113 +35,176 @@ def _model_to_dict(model: Any) -> dict[str, Any]:
     }
 
 
-def _clamp_0_1(value: float) -> float:
-    return max(0.0, min(1.0, value))
+def _verdict_passes(verdict: dict[str, Any]) -> bool:
+    return (
+        verdict.get("supported") is True
+        and verdict.get("unsupported_claims") == []
+        and verdict.get("needs_more_evidence") is False
+    )
 
 
-def _adjust_report_confidence(report: dict[str, Any], confidence_adjustment: float) -> dict[str, Any]:
-    confidence = report.get("confidence", 0.0)
+def _adjust_confidence(report: dict[str, Any], verdict: dict[str, Any]) -> dict[str, Any]:
+    confidence = float(report["confidence"])
+    adjustment = float(verdict["confidence_adjustment"])
+    if not math.isfinite(confidence) or not math.isfinite(adjustment):
+        raise RuntimeError("Final confidence values must be finite.")
+    adjusted = dict(report)
+    adjusted["confidence"] = round(max(0.0, min(1.0, confidence + adjustment)), 6)
+    return adjusted
+
+
+def _registry(
+    transaction: dict[str, Any],
+    customer: dict[str, Any],
+    features: dict[str, Any],
+    anomaly_score: float,
+    policies: list[dict[str, Any]],
+    cases: list[dict[str, Any]],
+) -> dict[str, dict[str, Any]]:
+    return build_evidence_registry(
+        transaction=transaction,
+        customer=customer,
+        features=features,
+        anomaly_score=anomaly_score,
+        policy_evidence=policies,
+        case_evidence=cases,
+    )
+
+
+def _exclude_potential_case_overlap(
+    cases: list[dict[str, Any]], transaction: dict[str, Any]
+) -> list[dict[str, Any]]:
+    """Conservatively exclude direct IDs and potential customer-plus-amount overlaps."""
+    transaction_id = str(transaction.get("transaction_id") or "").lower()
+    customer_id = str(transaction.get("customer_id") or "").lower()
+    amount = transaction.get("amount")
+    amount_tokens: set[str] = set()
     try:
-        base_confidence = float(confidence)
+        numeric_amount = float(amount)
+        amount_tokens = {f"{numeric_amount:.2f}", f"{numeric_amount:g}"}
     except (TypeError, ValueError):
-        base_confidence = 0.0
+        pass
 
-    adjusted_report = dict(report)
-    adjusted_report["confidence"] = round(_clamp_0_1(base_confidence + confidence_adjustment), 6)
-    return adjusted_report
-
-
-def _dedupe_evidence_rows(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
-    unique_rows: list[dict[str, Any]] = []
-    seen: set[str] = set()
-
-    for row in rows:
-        metadata = row.get("metadata", {})
-        key = f"{row.get('text', '')}|{metadata}|{row.get('similarity_score', 0.0)}"
-        if key in seen:
+    output = []
+    for row in cases:
+        text = str(row.get("text") or "").lower()
+        if transaction_id and transaction_id in text:
             continue
-        seen.add(key)
-        unique_rows.append(row)
+        normalized_text = re.sub(r"[^a-z0-9.\-]+", " ", text)
+        if customer_id and customer_id in normalized_text and any(
+            token in normalized_text for token in amount_tokens
+        ):
+            continue
+        output.append(row)
+    return output
 
-    unique_rows.sort(key=lambda item: float(item.get("similarity_score", 0.0)), reverse=True)
-    return unique_rows
+
+def _run_investigation(db: Session, transaction_id: str) -> dict[str, Any]:
+    record = get_transaction_with_customer(db, transaction_id=transaction_id)
+    if record is None:
+        raise LookupError(f"Transaction '{transaction_id}' not found.")
+
+    transaction_model, customer_model = record
+    raw_transaction = _model_to_dict(transaction_model)
+    raw_customer = _model_to_dict(customer_model)
+    transaction, customer = build_inference_inputs(raw_transaction, raw_customer)
+
+    anomaly_result = run_anomaly_analysis(transaction=transaction, customer=customer)
+    features = anomaly_result["features"]
+    anomaly_score = anomaly_result["anomaly_score"]
+    plan = build_investigation_plan(transaction=transaction, customer=customer, features=features)
+
+    policies = retrieve_policy_evidence(plan["policy_query"], top_k=3)
+    cases = _exclude_potential_case_overlap(
+        retrieve_similar_cases(plan["case_query"], top_k=3), transaction
+    )
+    evidence_registry = _registry(
+        transaction, customer, features, anomaly_score, policies, cases
+    )
+
+    draft = generate_investigation_report(
+        transaction, customer, features, anomaly_score, evidence_registry
+    )
+    initial_verdict = verify_investigation_report(
+        draft, transaction, customer, features, evidence_registry
+    )
+
+    trace: dict[str, Any] = {
+        "policy_query": plan["policy_query"],
+        "case_query": plan["case_query"],
+        "passes": [
+            {
+                "pass": 1,
+                "evidence_ids": list(evidence_registry),
+                "verification": initial_verdict,
+            }
+        ],
+        "extra_retrieval_performed": False,
+        "report_generation_passes": 1,
+        "verification_passes": 1,
+    }
+
+    final_report = draft
+    final_verdict = initial_verdict
+    suggested_query = str(initial_verdict.get("suggested_query") or "").strip()
+
+    if not _verdict_passes(initial_verdict) and suggested_query:
+        extra_policies = retrieve_policy_evidence(suggested_query, top_k=3)
+        extra_cases = _exclude_potential_case_overlap(
+            retrieve_similar_cases(suggested_query, top_k=3), transaction
+        )
+        policies = merge_evidence_rows(policies, extra_policies)
+        cases = merge_evidence_rows(cases, extra_cases)
+        evidence_registry = _registry(
+            transaction, customer, features, anomaly_score, policies, cases
+        )
+        final_report = generate_investigation_report(
+            transaction, customer, features, anomaly_score, evidence_registry
+        )
+        final_verdict = verify_investigation_report(
+            final_report, transaction, customer, features, evidence_registry
+        )
+        trace["extra_retrieval_performed"] = True
+        trace["additional_query"] = suggested_query
+        trace["report_generation_passes"] = 2
+        trace["verification_passes"] = 2
+        trace["passes"].append(
+            {
+                "pass": 2,
+                "evidence_ids": list(evidence_registry),
+                "verification": final_verdict,
+            }
+        )
+
+    final_report = _adjust_confidence(final_report, final_verdict)
+    passed = _verdict_passes(final_verdict)
+    final_report["status"] = "supported" if passed else "needs_review"
+    final_report["evidence"] = registry_records(evidence_registry)
+    final_report["verification"] = final_verdict
+    final_report["trace"] = trace
+
+    if not passed:
+        final_report["unresolved_claims"] = list(final_verdict["unsupported_claims"])
+        final_report["remaining_evidence_request"] = str(
+            final_verdict.get("suggested_query") or ""
+        ).strip()
+        action = str(final_report.get("recommended_action") or "").strip()
+        if "human review" not in action.lower():
+            final_report["recommended_action"] = (
+                f"{action} Requires human review before any decision."
+            ).strip()
+
+    create_investigation_report(
+        db=db,
+        transaction_id=transaction_id,
+        report_json=final_report,
+        risk_level=final_report["risk_level"],
+        confidence=final_report["confidence"],
+        summary=final_report["summary"],
+    )
+    return final_report
 
 
 def run_investigation(transaction_id: str) -> dict[str, Any]:
     with SessionLocal() as db:
-        record = get_transaction_with_customer(db, transaction_id=transaction_id)
-        if record is None:
-            raise LookupError(f"Transaction '{transaction_id}' not found.")
-
-        transaction_model, customer_model = record
-        transaction = _model_to_dict(transaction_model)
-        customer = _model_to_dict(customer_model)
-
-        anomaly_result = run_anomaly_analysis(transaction=transaction, customer=customer)
-        features = anomaly_result["features"]
-        anomaly_score = anomaly_result["anomaly_score"]
-
-        plan = build_investigation_plan(
-            transaction=transaction,
-            customer=customer,
-            features=features,
-        )
-
-        policy_evidence = retrieve_policy_evidence(policy_query=plan["policy_query"], top_k=3)
-        case_evidence = retrieve_similar_cases(case_query=plan["case_query"], top_k=3)
-
-        draft_report = generate_investigation_report(
-            transaction=transaction,
-            customer=customer,
-            features=features,
-            anomaly_score=anomaly_score,
-            policy_evidence=policy_evidence,
-            similar_cases=case_evidence,
-        )
-
-        verifier_result = verify_investigation_report(
-            draft_report=draft_report,
-            policy_evidence=policy_evidence,
-            case_evidence=case_evidence,
-            anomaly_features=features,
-        )
-
-        final_policy_evidence = list(policy_evidence)
-        final_case_evidence = list(case_evidence)
-        final_report = dict(draft_report)
-
-        if verifier_result["needs_more_evidence"]:
-            suggested_query = verifier_result.get("suggested_query", "").strip()
-            if suggested_query:
-                extra_policy_evidence = retrieve_policy_evidence(policy_query=suggested_query, top_k=3)
-                extra_case_evidence = retrieve_similar_cases(case_query=suggested_query, top_k=3)
-
-                final_policy_evidence = _dedupe_evidence_rows(policy_evidence + extra_policy_evidence)[:3]
-                final_case_evidence = _dedupe_evidence_rows(case_evidence + extra_case_evidence)[:3]
-
-                # One self-correction retry only.
-                final_report = generate_investigation_report(
-                    transaction=transaction,
-                    customer=customer,
-                    features=features,
-                    anomaly_score=anomaly_score,
-                    policy_evidence=final_policy_evidence,
-                    similar_cases=final_case_evidence,
-                )
-
-        final_report = _adjust_report_confidence(
-            report=final_report,
-            confidence_adjustment=float(verifier_result.get("confidence_adjustment", 0.0)),
-        )
-        final_report["transaction_id"] = transaction_id
-
-        create_investigation_report(
-            db=db,
-            transaction_id=transaction_id,
-            report_json=final_report,
-            risk_level=str(final_report.get("risk_level", "")).upper() or None,
-            confidence=float(final_report.get("confidence", 0.0)),
-            summary=str(final_report.get("summary", "")) or None,
-        )
-
-    return final_report
+        return _run_investigation(db, transaction_id)

@@ -1,0 +1,21 @@
+{
+  "description": "Deliberately selected, fixed 15-case synthetic sample; not representative population accuracy.",
+  "selection": "Five examples per reference level, selected from investigation_examples.csv before model predictions were inspected.",
+  "transactions": [
+    {"transaction_id": "TXN-004173", "expected_risk_level": "LOW"},
+    {"transaction_id": "TXN-000302", "expected_risk_level": "HIGH"},
+    {"transaction_id": "TXN-001293", "expected_risk_level": "LOW"},
+    {"transaction_id": "TXN-003220", "expected_risk_level": "HIGH"},
+    {"transaction_id": "TXN-004001", "expected_risk_level": "LOW"},
+    {"transaction_id": "TXN-000475", "expected_risk_level": "HIGH"},
+    {"transaction_id": "TXN-004869", "expected_risk_level": "HIGH"},
+    {"transaction_id": "TXN-002371", "expected_risk_level": "LOW"},
+    {"transaction_id": "TXN-003336", "expected_risk_level": "LOW"},
+    {"transaction_id": "TXN-003787", "expected_risk_level": "MEDIUM"},
+    {"transaction_id": "TXN-000719", "expected_risk_level": "HIGH"},
+    {"transaction_id": "TXN-001821", "expected_risk_level": "MEDIUM"},
+    {"transaction_id": "TXN-001371", "expected_risk_level": "MEDIUM"},
+    {"transaction_id": "TXN-001741", "expected_risk_level": "MEDIUM"},
+    {"transaction_id": "TXN-003556", "expected_risk_level": "MEDIUM"}
+  ]
+}

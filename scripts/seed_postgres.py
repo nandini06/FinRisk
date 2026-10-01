@@ -10,8 +10,13 @@ ROOT_DIR = Path(__file__).resolve().parents[1]
 if str(ROOT_DIR) not in sys.path:
     sys.path.insert(0, str(ROOT_DIR))
 
-from backend.app.db.database import Base, SessionLocal, engine
-from backend.app.db.models import Customer, HistoricalCase, InvestigationReport, Transaction
+from backend.app.db.database import Base, SessionLocal, engine  # noqa: E402
+from backend.app.db.models import (  # noqa: E402
+    Customer,
+    HistoricalCase,
+    InvestigationReport,
+    Transaction,
+)
 
 DATA_DIR = ROOT_DIR / "data"
 
@@ -55,9 +60,6 @@ def seed_transactions(db, df: pd.DataFrame) -> int:
             "amount_vs_customer_avg": to_none(row.get("amount_vs_customer_avg")),
             "new_destination_country_flag": to_none(row.get("new_destination_country_flag")),
             "new_transaction_type_flag": to_none(row.get("new_transaction_type_flag")),
-            "rule_hits": to_none(row.get("rule_hits")),
-            "risk_score": to_none(row.get("risk_score")),
-            "risk_label": to_none(row.get("risk_label")),
         }
         rows.append(
             Transaction(
@@ -95,28 +97,6 @@ def seed_historical_cases(db, df: pd.DataFrame) -> int:
     return len(rows)
 
 
-def seed_investigation_examples(db, df: pd.DataFrame) -> int:
-    rows: list[InvestigationReport] = []
-    for row in df.to_dict(orient="records"):
-        report_json = {
-            "example_id": to_none(row.get("example_id")),
-            "expected_risk_level": to_none(row.get("expected_risk_level")),
-            "gold_explanation": to_none(row.get("gold_explanation")),
-            "recommended_action": to_none(row.get("recommended_action")),
-        }
-        rows.append(
-            InvestigationReport(
-                transaction_id=str(row["transaction_id"]),
-                risk_level=to_none(row.get("expected_risk_level")),
-                summary=to_none(row.get("gold_explanation")),
-                report_json=report_json,
-            )
-        )
-
-    db.add_all(rows)
-    return len(rows)
-
-
 def print_table_counts(db) -> None:
     tables = [
         ("customers", Customer),
@@ -133,8 +113,6 @@ def main() -> None:
     customers_df = read_csv("customers.csv")
     transactions_df = read_csv("transactions.csv")
     historical_cases_df = read_csv("historical_cases.csv")
-    investigation_examples_df = read_csv("investigation_examples.csv")
-
     Base.metadata.create_all(bind=engine)
 
     with SessionLocal() as db:
@@ -147,14 +125,13 @@ def main() -> None:
         customer_count = seed_customers(db, customers_df)
         transaction_count = seed_transactions(db, transactions_df)
         historical_case_count = seed_historical_cases(db, historical_cases_df)
-        investigation_report_count = seed_investigation_examples(db, investigation_examples_df)
         db.commit()
 
         print("Inserted rows:")
         print(f"customers: {customer_count}")
         print(f"transactions: {transaction_count}")
         print(f"historical_cases: {historical_case_count}")
-        print(f"investigation_reports: {investigation_report_count}")
+        print("investigation_reports: 0 (reference answers are evaluation-only)")
         print("\nRow counts in database:")
         print_table_counts(db)
 
