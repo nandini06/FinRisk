@@ -3,7 +3,7 @@ from __future__ import annotations
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
 
-from ..agents.workflow import run_investigation
+from ..components.workflow import run_investigation
 from ..db.database import get_db
 from ..db.repositories import get_latest_report_by_transaction_id
 

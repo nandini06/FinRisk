@@ -4,14 +4,14 @@ from pathlib import Path
 import pandas as pd
 import pytest
 
-from backend.app.agents import planner_agent, report_agent, verifier_agent
-from backend.app.agents.evidence import (
+from backend.app.components import planner, report_generator, verifier
+from backend.app.components.evidence import (
     build_evidence_registry,
     merge_evidence_rows,
     registry_records,
     validate_report_citations,
 )
-from backend.app.agents.inference_inputs import build_inference_inputs
+from backend.app.components.inference_inputs import build_inference_inputs
 from backend.app.ml.features import extract_features
 
 
@@ -292,15 +292,15 @@ def test_captured_llm_prompts_exclude_answer_fields_and_gold_text(monkeypatch):
         captured.append(prompt)
         return next(responses)
 
-    monkeypatch.setattr(planner_agent, "generate_json", fake_generate)
-    monkeypatch.setattr(report_agent, "generate_json", fake_generate)
-    monkeypatch.setattr(verifier_agent, "generate_json", fake_generate)
+    monkeypatch.setattr(planner, "generate_json", fake_generate)
+    monkeypatch.setattr(report_generator, "generate_json", fake_generate)
+    monkeypatch.setattr(verifier, "generate_json", fake_generate)
     features = {"amount_vs_customer_avg": 1.0}
-    planner_agent.build_investigation_plan(clean_transaction, clean_customer, features)
-    report = report_agent.generate_investigation_report(
+    planner.build_investigation_plan(clean_transaction, clean_customer, features)
+    report = report_generator.generate_investigation_report(
         clean_transaction, clean_customer, features, 0.1, registry
     )
-    verifier_agent.verify_investigation_report(
+    verifier.verify_investigation_report(
         report, clean_transaction, clean_customer, features, registry
     )
 

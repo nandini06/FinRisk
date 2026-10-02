@@ -11,13 +11,13 @@ from sqlalchemy.orm import Session
 from ..db.database import SessionLocal
 from ..db.repositories import create_investigation_report, get_transaction_with_customer
 from .anomaly_agent import run_anomaly_analysis
-from .case_agent import retrieve_similar_cases
+from .case_retriever import retrieve_similar_cases
 from .evidence import build_evidence_registry, merge_evidence_rows, registry_records
 from .inference_inputs import build_inference_inputs
-from .planner_agent import build_investigation_plan
-from .policy_agent import retrieve_policy_evidence
-from .report_agent import generate_investigation_report
-from .verifier_agent import verify_investigation_report
+from .planner import build_investigation_plan
+from .policy_retriever import retrieve_policy_evidence
+from .report_generator import generate_investigation_report
+from .verifier import verify_investigation_report
 
 
 def _serialize_value(value: Any) -> Any:

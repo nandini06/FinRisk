@@ -2,7 +2,7 @@ from types import SimpleNamespace
 
 import pytest
 
-from backend.app.agents import workflow
+from backend.app.components import workflow
 from backend.app.db.models import Customer, Transaction
 
 

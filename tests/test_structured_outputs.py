@@ -3,7 +3,7 @@ import math
 import pytest
 from pydantic import ValidationError
 
-from backend.app.agents import report_agent
+from backend.app.components import report_generator
 from backend.app.llm.gemini_client import GeminiProviderError, StructuredOutputError
 from backend.app.schemas.investigation import ReportOutput, VerifierOutput
 
@@ -70,7 +70,7 @@ def test_verifier_requires_actual_booleans_and_finite_adjustment():
 
 def test_transaction_id_consistency():
     with pytest.raises(ValueError, match="transaction_id"):
-        report_agent._validate_report(valid_report() | {"transaction_id": "WRONG"}, "TXN-1", {"feature:amount": {}})
+        report_generator._validate_report(valid_report() | {"transaction_id": "WRONG"}, "TXN-1", {"feature:amount": {}})
 
 
 def test_policy_severity_is_distinct_from_higher_model_assessment():
@@ -88,7 +88,7 @@ def test_policy_severity_is_distinct_from_higher_model_assessment():
         source_ids=["policy:AML-003", "feature:amount"],
     )
 
-    result = report_agent._validate_report(payload, "TXN-1", registry)
+    result = report_generator._validate_report(payload, "TXN-1", registry)
     assert result["risk_factors"][0]["severity"] == "HIGH"
     assert result["risk_factors"][0]["policy_severities"] == [
         {"policy_id": "AML-003", "severity": "MEDIUM"}
@@ -107,7 +107,7 @@ def test_higher_model_severity_requires_fact_or_feature_support():
     )
 
     with pytest.raises(ValueError, match="without fact/feature evidence"):
-        report_agent._validate_report(payload, "TXN-1", registry)
+        report_generator._validate_report(payload, "TXN-1", registry)
 
 
 def test_policy_required_and_discretionary_actions_are_labeled_and_sourced():
@@ -116,7 +116,7 @@ def test_policy_required_and_discretionary_actions_are_labeled_and_sourced():
         "feature:amount": {"value": 54.0},
     }
     discretionary = valid_report()
-    assert report_agent._validate_report(discretionary, "TXN-1", registry)[
+    assert report_generator._validate_report(discretionary, "TXN-1", registry)[
         "recommended_action_basis"
     ] == "DISCRETIONARY_HUMAN_REVIEW"
 
@@ -127,14 +127,14 @@ def test_policy_required_and_discretionary_actions_are_labeled_and_sourced():
         recommended_action_source_ids=["policy:AML-003"],
         recommended_action_rationale="AML-003 explicitly says the activity should be investigated.",
     )
-    assert report_agent._validate_report(policy_required, "TXN-1", registry)[
+    assert report_generator._validate_report(policy_required, "TXN-1", registry)[
         "recommended_action_basis"
     ] == "POLICY_REQUIRED"
 
     mislabeled = valid_report()
     mislabeled["recommended_action"] = "Hold the transaction."
     with pytest.raises(ValueError, match="Suggested for human review"):
-        report_agent._validate_report(mislabeled, "TXN-1", registry)
+        report_generator._validate_report(mislabeled, "TXN-1", registry)
 
 
 def test_report_repair_once_then_success(monkeypatch):
@@ -146,8 +146,8 @@ def test_report_repair_once_then_success(monkeypatch):
             raise StructuredOutputError("malformed JSON")
         return valid_report()
 
-    monkeypatch.setattr(report_agent, "generate_json", fake_generate)
-    result = report_agent.generate_investigation_report(
+    monkeypatch.setattr(report_generator, "generate_json", fake_generate)
+    result = report_generator.generate_investigation_report(
         {"transaction_id": "TXN-1"}, {}, {}, 0.0, {"feature:amount": {}}
     )
     assert result["transaction_id"] == "TXN-1"
@@ -161,9 +161,9 @@ def test_provider_failure_is_clear_and_not_repaired(monkeypatch):
         calls.append(prompt)
         raise GeminiProviderError("private provider details")
 
-    monkeypatch.setattr(report_agent, "generate_json", fail)
+    monkeypatch.setattr(report_generator, "generate_json", fail)
     with pytest.raises(RuntimeError, match="provider request failed"):
-        report_agent.generate_investigation_report(
+        report_generator.generate_investigation_report(
             {"transaction_id": "TXN-1"}, {}, {}, 0.0, {"feature:amount": {}}
         )
     assert len(calls) == 1
@@ -176,9 +176,9 @@ def test_report_repair_is_exhausted_after_two_calls(monkeypatch):
         calls.append(prompt)
         raise RuntimeError("malformed JSON")
 
-    monkeypatch.setattr(report_agent, "generate_json", fail)
+    monkeypatch.setattr(report_generator, "generate_json", fail)
     with pytest.raises(RuntimeError, match="after one repair"):
-        report_agent.generate_investigation_report(
+        report_generator.generate_investigation_report(
             {"transaction_id": "TXN-1"}, {}, {}, 0.0, {"feature:amount": {}}
         )
     assert len(calls) == 2
